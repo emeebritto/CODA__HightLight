@@ -1,0 +1,68 @@
+.container_menu {
+	display: flex;
+	flex-direction: column;
+	margin-left: 7%;
+}
+
+.title_nav {
+	color: white;
+	margin-bottom: 20px;
+    font-family: 'Abel', sans-serif;
+}
+
+.button_codeEditor {
+	display: flex;
+	align-items: center;
+	margin-bottom: 13px;
+	width: 180px;
+}
+
+.button_codeEditor:hover {
+	cursor: pointer;
+}
+
+.block_icon__active {
+	background-color: #5081FB;
+	width: 47px;
+	height: 47px;
+	border-radius: 14px;
+}
+
+.block_icon {
+	background-color: #0e2c78;
+	width: 47px;
+	height: 47px;
+	border-radius: 14px;
+}
+
+.block_icon_img_editor {
+	position: relative;
+	top: 25%;
+	left: 25%;
+}
+
+.name_codeEditor {
+	margin-left: 16px;
+	color: white;
+}
+
+.button_community {
+	display: flex;
+	align-items: center;
+	width: 180px;
+}
+
+.button_community:hover{
+	cursor: pointer;
+}
+
+.block_icon_img_community {
+	position: relative;
+	top: 25%;
+	left: 25%;
+}
+
+.name_community {
+	margin-left: 16px;
+	color: white;
+}

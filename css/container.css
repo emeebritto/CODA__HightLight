@@ -1,0 +1,24 @@
+.container {
+	display: grid;
+	height: 35.3em;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto;
+}
+
+.menu {
+	background-color: ;
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.codePreview {
+	background-color: ;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.configs_preview {
+	background-color: ;
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
