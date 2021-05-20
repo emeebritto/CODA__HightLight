@@ -1,6 +1,6 @@
 .container {
 	display: grid;
-	height: 35.3em;
+	height: 34.7em;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: auto;
 }
