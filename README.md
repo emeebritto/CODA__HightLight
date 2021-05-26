@@ -1,2 +1,2 @@
-# CODA__ColorPicker
+# CODA__HighLight
  Alura_Challenge
