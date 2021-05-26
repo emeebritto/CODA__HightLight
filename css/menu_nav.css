@@ -14,11 +14,14 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 13px;
-	width: 180px;
+	width: 240px;
+	transition: 500ms;
 }
 
 .button_codeEditor:hover {
 	cursor: pointer;
+	background-color: rgb(128 128 128 / 7%);
+	border-radius: 9px;
 }
 
 .block_icon__active {
@@ -44,16 +47,20 @@
 .name_codeEditor {
 	margin-left: 16px;
 	color: white;
+	text-decoration: none;
 }
 
 .button_community {
 	display: flex;
 	align-items: center;
-	width: 180px;
+	width: 240px;
+	transition: 500ms;
 }
 
 .button_community:hover{
 	cursor: pointer;
+	background-color: rgb(128 128 128 / 7%);
+	border-radius: 9px;
 }
 
 .block_icon_img_community {
@@ -65,4 +72,9 @@
 .name_community {
 	margin-left: 16px;
 	color: white;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
 }

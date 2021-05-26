@@ -51,12 +51,10 @@
 	outline:none;
 	border: none;
 	background-color: transparent;
-	color: #D8D8D8;
 	width: 93%;
 	height: 80%;
 	font-size: 1.1em;
 	margin-top: 3px;
-	left: 3%;
 }
 
 .button__viewHightLight {

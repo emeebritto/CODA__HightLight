@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="css/preview.css">
 		<link rel="stylesheet" href="css/configs_preview.css">
 		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/darcula.css">
 		<link rel="icon" href="assets/icon.png">
 	</head>
 
@@ -39,12 +40,14 @@
 					</div>
 					<p class="name_codeEditor">Editor de Codigos</p>
 				</section>
-				<section class="button_community">
-					<div class="block_icon">
-						<img class="block_icon_img_community" src="assets/icons/icon_users.svg" type="svg">
-					</div>
-					<p class="name_community">Comunidade</p>
-				</section>
+				<a href="index2.html">
+					<section class="button_community">
+						<div class="block_icon">
+							<img class="block_icon_img_community" src="assets/icons/icon_users.svg" type="svg">
+						</div>
+						<p class="name_community">Comunidade</p>
+					</section>
+			    </a>
 			</nav>
 
 			<main class="codePreview">
@@ -55,7 +58,9 @@
 							<div class="button__decoration__yellow buttons__decoration"></div>
 							<div class="button__decoration__green buttons__decoration"></div>
 						</div>
-						<textarea class="campo__code" style="resize: none"></textarea>
+						<div class="wrapper_code">
+						    <code class="campo__code hljs" contenteditable="true" aria-label="editor"></code>	
+						</div>
 					</div>
 				</section>
 				<button class="button__viewHightLight">Visualizar com o Highlight</button>
@@ -70,13 +75,13 @@
 				    <option id="select_op">JavaScript</option>
 				    <option id="select_op">HTML</option>
 				    <option id="select_op">CSS</option>
+				    <option id="select_op">Python</option>
 				</select>
 				<input class="personalization__selectorColor" value="#5a3aa1" type="color" onchange="shiftColor()">
 				<button class="personalization__buttonSave">Salvar Projeto</button>
 			</section>
 		</section>
-
-        <!-- <a href="index2.html">Segunda Pag.</a> -->
+        <script src="js/highlight.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/index2.js"></script>
 	</body>
