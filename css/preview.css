@@ -1,25 +1,26 @@
 .painel__border {
 	background-color: #5a3aa1;
 	border-radius: 9px;
-	height: 57%;
+	min-height: 57%;
 	margin-bottom: 26px;
 }
 
 .painel__code {
-	position: relative;
-	left: 5%;
-	top: 7%;
-	background-color: #000E1E;
-	box-shadow: 5px 5px 30px black;
-	border-radius: 9px;
-	width: 90%;
-	height: 87%;
+    position: relative;
+    left: 5%;
+    top: 1em;
+    background-color: #000E1E;
+    box-shadow: 5px 5px 30px black;
+    padding-bottom: 7px;
+    border-radius: 9px;
+    width: 90%;
+    min-height: 17em;
 }
 
 .box__buttons__decoration {
 	display: flex;
 	align-items: center;
-	margin: 1% 0 1% 2.7%;
+	margin: 1% 0 1.9% 2.7%;
 	background-color: transparent;
 	width: 100%;
 	height: 11%;
@@ -51,10 +52,10 @@
 	outline:none;
 	border: none;
 	background-color: transparent;
-	width: 93%;
+	width: 96%;
 	height: 80%;
 	font-size: 1.1em;
-	margin-top: 3px;
+	margin-top: 6px;
 }
 
 .button__viewHightLight {
@@ -68,4 +69,16 @@
 
 .button__viewHightLight:hover {
 	cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background: #343434;
 }

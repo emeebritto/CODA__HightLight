@@ -17,6 +17,8 @@ function selectedLanguagem() {
     fieldCode.firstChild.innerText = codigo.innerText
 }
 
+window.addEventListener('load', highlightActive());
+
 languagem.addEventListener('change', () => {
     selectedLanguagem()
     highlightActive()

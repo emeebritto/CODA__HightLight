@@ -10,15 +10,15 @@
     font-family: 'Abel', sans-serif;
 }
 
-.button_codeEditor {
+.buttons_nav {
 	display: flex;
-	align-items: center;
 	margin-bottom: 13px;
+	align-items: center;
 	width: 240px;
 	transition: 500ms;
 }
 
-.button_codeEditor:hover {
+.buttons_nav:hover{
 	cursor: pointer;
 	background-color: rgb(128 128 128 / 7%);
 	border-radius: 9px;
@@ -36,9 +36,10 @@
 	width: 47px;
 	height: 47px;
 	border-radius: 14px;
+	opacity: 50%;
 }
 
-.block_icon_img_editor {
+.block_icon_iconPosition {
 	position: relative;
 	top: 25%;
 	left: 25%;
@@ -48,19 +49,6 @@
 	margin-left: 16px;
 	color: white;
 	text-decoration: none;
-}
-
-.button_community {
-	display: flex;
-	align-items: center;
-	width: 240px;
-	transition: 500ms;
-}
-
-.button_community:hover{
-	cursor: pointer;
-	background-color: rgb(128 128 128 / 7%);
-	border-radius: 9px;
 }
 
 .block_icon_img_community {

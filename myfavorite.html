@@ -2,21 +2,22 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title>CODA - HightLight Editor</title>
+		<title>CODA - Saved</title>
 		<meta name="viewport" content="width=device-width">
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Abel&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/container.css">
 		<link rel="stylesheet" href="css/menu_nav.css">
-		<link rel="stylesheet" href="css/preview.css">
-		<link rel="stylesheet" href="css/configs_preview.css">
-		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/container_PagCommunity.css">
+	    <link rel="stylesheet" href="css/filterLanguagem_community.css">
 		<link rel="stylesheet" href="css/darcula.css">
+		<link rel="stylesheet" href="css/myHighLightPag.css">
 		<link rel="icon" href="assets/icon.png">
 	</head>
 
@@ -30,14 +31,12 @@
 				<p class="campo__perfil__name">Emerson_Britto</p>
 			</section>
 		</header>
-
 		<section class="container">
 			<nav class="container_menu">
 				<h1 class="title_nav">MENU</h1>
-
 				<a href="index.html">
 					<section class="buttons_nav">
-						<div class="block_icon__active">
+						<div class="block_icon">
 							<img class="block_icon_iconPosition" src="assets/icons/code_white_24dp.svg" type="svg">
 						</div>
 						<p class="name_codeEditor">Code Editor</p>
@@ -55,7 +54,7 @@
 
 				<a href="myfavorite.html">
 					<section class="buttons_nav">
-						<div class="block_icon">
+						<div class="block_icon__active">
 							<img class="block_icon_iconPosition" src="assets/icons/bookmarks_white_24dp.svg" type="svg">
 						</div>
 						<p class="name_community">Bookmarks</p>
@@ -72,38 +71,11 @@
 			    </a>
 			</nav>
 
-			<main class="codePreview">
-				<section class="painel__border">
-					<div class="painel__code">
-						<div class="box__buttons__decoration">
-							<div class="button__decoration__red buttons__decoration"></div>
-							<div class="button__decoration__yellow buttons__decoration"></div>
-							<div class="button__decoration__green buttons__decoration"></div>
-						</div>
-						<div class="wrapper_code">
-						    <code class=" hljs" contenteditable="true" aria-label="editor"></code>	
-						</div>
-					</div>
-				</section>
-				<button class="button__viewHightLight">Visualizar com o Highlight</button>
+			<main class="main">
+				<img src="https://i.gifer.com/IuFl.gif" class="imgbasic">
+				<h1 class="text1">Ops... Parece que você tentou acessar um conteúdo indisponivel</h1>
+				<p class="text2">Está pagina ainda está em desenvolvimento, volte mais tarde. alías, mais tarde não, proxima semana :)</p>
 			</main>
-
-			<section class="configs_preview">
-				<h1 class="myProject__titleYourProject">SEU PROJETO</h1>
-				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Nome do Seu Projeto">
-				<textarea class="myProject__description" cols="30" rows="4" type="search" name="DescricaoProjeto" style="resize: none" placeholder="Descrição do Seu Projeto..."></textarea>
-				<h1 class="personalization__title">PERSONALIZAÇÃO</h1>
-				<select class="personalization__selectorLanguagem">
-				    <option id="select_op">JavaScript</option>
-				    <option id="select_op">HTML</option>
-				    <option id="select_op">CSS</option>
-				    <option id="select_op">Python</option>
-				</select>
-				<input class="personalization__selectorColor" value="#5a3aa1" type="color" onchange="shiftColor()">
-				<button class="personalization__buttonSave">Salvar Projeto</button>
-			</section>
 		</section>
-        <script src="js/highlight.js"></script>
-		<script src="js/index.js"></script>
 	</body>
 </html>
