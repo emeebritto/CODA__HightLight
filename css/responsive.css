@@ -32,7 +32,7 @@
 @media screen and (max-width: 970px) {
 
     .container {
-    	grid-template-columns: 1fr 6fr;
+    	grid-template-columns: 1fr 8fr;
     	grid-template-rows: auto auto;
     }
 
@@ -60,10 +60,11 @@
 	}
 
 	.painel__border {
-		height: 73%;
+		min-height: 73%;
 	}
 
 	.painel__code {
+		top: 1.6em;
 		font-size: 1.1em;
 	}
 
@@ -77,5 +78,9 @@
 	.personalization__selectorColor {
 		width: 99.2%;
 		height: 8.3%;
+	}
+
+	.hljs {
+		margin-right: 12px;
 	}
 }

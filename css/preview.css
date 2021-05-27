@@ -1,8 +1,12 @@
+.hljs {
+  min-height: 230px;
+}
+
 .painel__border {
 	background-color: #5a3aa1;
 	border-radius: 9px;
 	min-height: 57%;
-	margin-bottom: 26px;
+	margin-bottom: 30px;
 }
 
 .painel__code {

@@ -22,8 +22,10 @@
 
 	<body>
 		<header class="top__pag">
-			<img class="top__logo__img" src="assets/img/logo_coda.png">
-			<input class="top__search" type="search" name="search" placeholder="Busque Por Algo">
+			<a href="index.html" id="tagAheader">
+				<img class="top__logo__img" src="assets/img/logo_coda.png">
+			</a>
+			<input class="top__search" type="search" name="search" placeholder="Search">
 
 			<section class="campo__perfil">
 				<img class="campo__perfil__img" src="assets/img/img-perfil.png">
@@ -81,18 +83,18 @@
 							<div class="button__decoration__green buttons__decoration"></div>
 						</div>
 						<div class="wrapper_code">
-						    <code class=" hljs" contenteditable="true" aria-label="editor"></code>	
+						    <code class=" hljs" contenteditable="true" aria-label="editor">console.log("Type here...")</code>	
 						</div>
 					</div>
 				</section>
-				<button class="button__viewHightLight">Visualizar com o Highlight</button>
+				<button class="button__viewHightLight">Activate Highlight</button>
 			</main>
 
 			<section class="configs_preview">
-				<h1 class="myProject__titleYourProject">SEU PROJETO</h1>
-				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Nome do Seu Projeto">
-				<textarea class="myProject__description" cols="30" rows="4" type="search" name="DescricaoProjeto" style="resize: none" placeholder="Descrição do Seu Projeto..."></textarea>
-				<h1 class="personalization__title">PERSONALIZAÇÃO</h1>
+				<h1 class="myProject__titleYourProject">MY PROJECT</h1>
+				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Name">
+				<textarea class="myProject__description" cols="30" rows="4" type="search" name="DescricaoProjeto" style="resize: none" placeholder="Description..."></textarea>
+				<h1 class="personalization__title">PERSONALIZATION</h1>
 				<select class="personalization__selectorLanguagem">
 				    <option id="select_op">JavaScript</option>
 				    <option id="select_op">HTML</option>
@@ -100,7 +102,7 @@
 				    <option id="select_op">Python</option>
 				</select>
 				<input class="personalization__selectorColor" value="#5a3aa1" type="color" onchange="shiftColor()">
-				<button class="personalization__buttonSave">Salvar Projeto</button>
+				<button class="personalization__buttonSave">Save Project</button>
 			</section>
 		</section>
         <script src="js/highlight.js"></script>

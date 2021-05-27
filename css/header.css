@@ -2,11 +2,16 @@ body {
 	background-color: #07061b;
 }
 
+#tagAheader {
+	width: 130px;
+	margin-left: 2%;
+}
+
 .top__pag {
 	display: flex;
 	justify-content: space-between;
 	height: 4rem;
-    width: auto;
+  width: auto;
 	margin-top: 10px;
 	margin-bottom: 25px;
 	border-bottom: 1px solid #130730;
@@ -14,7 +19,8 @@ body {
 
 .top__logo__img {
 	position: relative;
-	bottom: 4%;
+	width: 100%;
+	bottom: 10%;
 	overflow: hidden;
 	margin-left: 2.7%;
 	margin-right: 2.8%;
