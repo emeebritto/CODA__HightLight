@@ -1,23 +1,40 @@
-.main {
+.myPosts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.highLightbyNameUser {
+	color: white;
+	font-size: 2em;
+	font-family: 'Odibee Sans', cursive;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #130730;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.box__noContent_myPost {
+	width: 100%;
 	text-align: center;
 }
 
-.imgbasic {
-	margin-top: 30px;
-	border-radius: 10px;
-	width: 390px;
-	margin-bottom: 30px;
+.noContent__img {
+	position: relative;
+	width: 380px;
+	margin-top: 50px;
+	margin-bottom: 20px;
 }
 
-.text1 {
+.noContent__text {
 	color: white;
-	font-size: 3em;
-    font-family: 'Odibee Sans', cursive;
-    margin-bottom: 10px;
-}
-
-.text2 {
-	color: white;
-	font-size: 1.5em;
+	font-size: 1.6em;
     font-family: 'Abel', sans-serif;
+}
+
+.contentSendFor__privacyIcon {
+/*	position: relative;*/
+	margin-right: 5%;
+	display: inline-block;
+/*	left: 272px;*/
+	transform: scale(1.2);
 }

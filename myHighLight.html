@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/menu_nav.css">
-		<link rel="stylesheet" href="css/container_PagCommunity.css">
-	    <link rel="stylesheet" href="css/filterLanguagem_community.css">
+		<link rel="stylesheet" href="css/container_PagMyHighLight.css">
 		<link rel="stylesheet" href="css/darcula.css">
 		<link rel="stylesheet" href="css/myHighLightPag.css">
+		<link rel="stylesheet" href="css/aparencyCards.css">
+        <link rel="stylesheet" href="css/responsive__myPostPag.css">
 		<link rel="icon" href="assets/icon.png">
 	</head>
 
@@ -73,11 +74,19 @@
 			    </a>
 			</nav>
 
-			<main class="main">
-				<img src="https://i.pinimg.com/originals/27/e8/bc/27e8bc37685a17721bcee6997ff09b2f.gif" class="imgbasic">
-				<h1 class="text1">Ops... Parece que você tentou acessar um conteúdo indisponivel</h1>
-				<p class="text2">Está pagina ainda está em desenvolvimento, volte mais tarde. alías, mais tarde não, proxima semana :)</p>
+			<section class="box__highLightbyNameUser">
+				<h1 class="highLightbyNameUser">Postagem de "Emerson_Britto"</h1>
+			</section>
+
+			<main class="myPosts">
+				<span class="box__noContent_myPost" style="display: none;">
+					<img class="noContent__img" src="assets/img/sorry-item-not-found.png">
+					<p class="noContent__text">Sem rastros de Publicações por aqui</p>
+				</span>
+
 			</main>
 		</section>
+        <script src="js/highlight.js"></script>
+        <script src="js/getProjectMyPost.js"></script>
 	</body>
 </html>

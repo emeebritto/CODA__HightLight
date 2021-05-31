@@ -1,0 +1,22 @@
+.main {
+    text-align: center;
+}
+
+.imgbasic {
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.text1 {
+	color: white;
+	font-size: 3em;
+	font-family: 'Odibee Sans', cursive;
+	margin-bottom: 10px;
+}
+
+.text2 {
+	color: white;
+	font-size: 1.3em;
+	font-family: 'Montserrat', sans-serif;
+}

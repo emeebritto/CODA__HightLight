@@ -1,6 +1,9 @@
 .community_filterlanguagen {
 	display: flex;
 	align-items: center;
+	height:50px;
+	border-bottom: 1px solid #0c0b2b;
+	margin-bottom: 20px;
 }
 
 .filter_btn:first-child {
@@ -21,4 +24,8 @@
 .filter_btn:hover {
     cursor: pointer;
     background-color: #1f1d44;
+}
+
+.filter_btn__active {
+	background-color: #3e3d6d;
 }

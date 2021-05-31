@@ -1,7 +1,6 @@
 .container {
 	display: grid;
 	height: auto;
-	max-width: 100vw;
 	grid-template-columns: 1fr 4fr;
 	grid-template-rows: auto auto;
 }
@@ -12,14 +11,14 @@
 	grid-row: 1/3;
 }
 
-.community_filterlanguagen {
+.box__highLightbyNameUser {
 	background-color: ;
 	grid-column: 2/3;
 	grid-row: 1/2;
 }
 
-.communityPag {
-	background-color:;
+.myPosts {
+	background-color: ;
 	grid-column: 2/3;
 	grid-row: 2/3;
 }
