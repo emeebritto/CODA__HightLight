@@ -1,4 +1,11 @@
+var searchBar = document.querySelector(".top__search");
 
+searchBar.addEventListener("input", function(){
+    if (searchBar.value == "/clearStorage"){
+        localStorage.clear();
+        alert("O localStorage foi resetado com sucesso");
+    }
+})
 
 /*const field_Code = document.querySelector('.field_code');
 const code_languagem = document.querySelector('.label_tagCode');

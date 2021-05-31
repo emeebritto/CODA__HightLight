@@ -9,7 +9,14 @@
   
 })();
 
+var searchBar = document.querySelector(".top__search");
 
+searchBar.addEventListener("input", function(){
+    if (searchBar.value == "/clearStorage"){
+        localStorage.clear();
+        alert("O localStorage foi resetado com sucesso");
+    }
+})
 
 const fieldCode = document.querySelector('.wrapper_code');
 const languagem = document.querySelector('.personalization__selectorLanguagem');

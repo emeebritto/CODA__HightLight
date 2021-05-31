@@ -13,6 +13,7 @@ function showProject() {
 	if (verification != null){
 
 	    let projectCommunity = []
+	    projectWithoutPrivacy = [];
 	    for(let i = 0; i < localStorage.length; i++) {
 	        projectCommunity.push(JSON.parse(localStorage.getItem("onCommunity " + i)))
 	    }
@@ -23,7 +24,7 @@ function showProject() {
 		        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCommunity}"]`)
 		        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCommunity}"]`))
 		        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
-		        addHighLight(project);	        	
+		        addHighLight(project);
 	        }
 	    })
 
@@ -143,14 +144,13 @@ boxFilter.addEventListener("click", function(){
 });
 
 var primaryClick = 0;
-
 function postFilter(){
-
 	if (primaryClick == 1){
-	    for (var i = 1; i <= projectWithoutPrivacy.length; i++) {
+	    for (var i = 0; i < projectWithoutPrivacy.length; i++) {
 	    	postID = "onCommunity " + i;
 	        hhh = communityPag.querySelector(`[data-id="${postID}"]`);
 	        if (hhh != null){
+	        	console.log("limpei");
 	            hhh.remove();	        	
 	        }
 	    }
@@ -158,9 +158,7 @@ function postFilter(){
 	}
 
 	btnFilterActive = document.querySelector(".filter_btn__active");
-
-	for (var i = 1; i <= projectWithoutPrivacy.length; i++) {
-
+	for (var i = 0; i < projectWithoutPrivacy.length; i++) {
         postID = "onCommunity " + i;
 		postFocus = communityPag.querySelector(`[data-id="${postID}"]`);
 		tagCode = postFocus.querySelector(".label_tagCode");
