@@ -150,12 +150,13 @@ function postFilter(){
 	    	postID = "onCommunity " + i;
 	        hhh = communityPag.querySelector(`[data-id="${postID}"]`);
 	        if (hhh != null){
-	        	console.log("limpei");
 	            hhh.remove();	        	
 	        }
 	    }
 	    showProject()
 	}
+
+	var verificationTwo = projectWithoutPrivacy.length;
 
 	btnFilterActive = document.querySelector(".filter_btn__active");
 	for (var i = 0; i < projectWithoutPrivacy.length; i++) {
@@ -166,10 +167,20 @@ function postFilter(){
 			break
 		}
 		if (tagCode.textContent != btnFilterActive.textContent){
-            communityPag.querySelector(`[data-id="${postID}"]`).remove();			
+            communityPag.querySelector(`[data-id="${postID}"]`).remove();
+            verificationTwo = verificationTwo -1;		
 		}
 	}
     primaryClick = 1;
+    console.log(verificationTwo);
+    if (verificationTwo == 0){
+    	boxNoContent = document.querySelector(".box__noContent");
+    	boxNoContent.style.display="inline-block";
+    }
+    if (verificationTwo != 0){
+    	boxNoContent = document.querySelector(".box__noContent");
+    	boxNoContent.style.display="none";
+    }
 }
 
 
