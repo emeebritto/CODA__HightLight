@@ -3,7 +3,7 @@
       color = document.querySelector('input[type=color]');
   
   color.addEventListener('input', function(){
-/*    console.log(this.value);*/
+
     borderColor.style.backgroundColor = this.value;
   });
   
@@ -15,6 +15,7 @@ searchBar.addEventListener("input", function(){
     if (searchBar.value == "/clearStorage"){
         localStorage.clear();
         alert("O localStorage foi resetado com sucesso");
+        searchBar.value = "";
     }
 })
 
@@ -23,28 +24,21 @@ const languagem = document.querySelector('.personalization__selectorLanguagem');
 var lastSelect = languagem.value;
 const codigo = fieldCode.querySelector('code');
 
-/*codigo.classList.add(preview);*/
 
 function selectedLanguagem() {
     const codigo = fieldCode.querySelector('code')
     fieldCode.innerHTML = `<code class="preview hljs ${languagem.value}" contenteditable="true" aria-label="editor"></code>`
     fieldCode.firstChild.innerText = codigo.innerText
-/*    codigo.classList.add(languagem.value);
-    lastSelect = languagem.value;*/
+
 }
 
 window.addEventListener('load', function(){
     selectedLanguagem();
 });
 
-codigo.addEventListener('change', function(){
-    console.log("mudança aqui");
-    selectedLanguagem()
-    highlightActive()    
-});
 
 languagem.addEventListener('change', () => {
-/*    codigo.classList.remove(lastSelect);*/
+
     selectedLanguagem()
     highlightActive()
 })
@@ -61,28 +55,3 @@ function activeAlert(){
     button.classList.remove("button__viewHightLight__disable");
 }
 
-/*---------------------------------------------------------------------------------*/
-
-var blockCheck = document.querySelector(".block_checkbox");
-var btn_saveProject = document.querySelector(".personalization__buttonSave");
-blockCheck.value = "0";
-check = 2;
-
-blockCheck.addEventListener("click", function(){
-    if (check == 1){
-        blockCheck.classList.remove('block_checkbox__Checked')
-        btn_saveProject.textContent = "Save and Publish"
-        blockCheck.value = "0";
-        console.log(blockCheck.value);
-        check = 2;
-        return
-    }
-    if (check == 2){
-        blockCheck.classList.add('block_checkbox__Checked')
-        btn_saveProject.textContent = "Save Project"
-        blockCheck.value = "1";
-        console.log(blockCheck.value);
-        check = 1;
-        return
-    }
-})

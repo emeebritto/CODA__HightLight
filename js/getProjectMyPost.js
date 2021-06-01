@@ -142,11 +142,3 @@ function timeSince(date) {
 }
 var aDay = 24*60*60*1000;
 
-var searchBar = document.querySelector(".top__search");
-
-searchBar.addEventListener("input", function(){
-    if (searchBar.value == "/clearStorage"){
-        localStorage.clear();
-        alert("O localStorage foi resetado com sucesso");
-    }
-})

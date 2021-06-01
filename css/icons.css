@@ -1,0 +1,11 @@
+.personalization__selectorLanguagem {
+    background: url(../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;
+}
+
+.block_checkbox {
+    background: url(../assets/icons/done_white_24dp.svg) no-repeat center;
+}
+
+.block_checkbox__Checked {
+    background: url(../assets/icons/done_black_24dp.svg) no-repeat center white;
+}

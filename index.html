@@ -11,16 +11,21 @@
 
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/container.css">
 		<link rel="stylesheet" href="css/menu_nav.css">
-		<link rel="stylesheet" href="css/preview.css">
-		<link rel="stylesheet" href="css/configs_preview.css">
-		<link rel="stylesheet" href="css/responsive.css">
-		<link rel="stylesheet" href="css/darcula.css">
+		<link rel="stylesheet" href="css/darcula.css">		
+		<link rel="stylesheet" href="css/codeEditor/gridSystem__codeEditor.css">
+		<link rel="stylesheet" href="css/codeEditor/preview.css">
+		<link rel="stylesheet" href="css/codeEditor/configs_preview.css">
+		<link rel="stylesheet" href="css/codeEditor/responsive.css">
+		<link rel="stylesheet" href="css/codeEditor/parametrosTemaDarcula.css">
+        <link rel="stylesheet" href="css/icons.css">
 		<link rel="icon" href="assets/icon.png">
 	</head>
 
 	<body>
+
+<!------------------------------------------------------ topo da pagina inicial -->
+
 		<header class="top__pag">
 			<a href="index.html" id="tagAheader">
 				<img class="top__logo__img" src="assets/img/logo_coda.png">
@@ -32,6 +37,8 @@
 				<p class="campo__perfil__name">Emerson_Britto</p>
 			</section>
 		</header>
+
+<!------------------------------------------------------ menu de navegação (lateral) -->
 
 		<section class="container">
 			<nav class="container_menu">
@@ -46,7 +53,7 @@
 					</section>					
 				</a>
 
-				<a href="myHighLight.html">
+				<a href="myPosts.html">
 					<section class="buttons_nav">
 						<div class="block_icon">
 							<img class="block_icon_iconPosition" src="assets/icons/library_books_white_24dp.svg" type="svg">
@@ -55,7 +62,7 @@
 					</section>
 			    </a>
 
-				<a href="myfavorite.html">
+				<a href="bookmarks.html">
 					<section class="buttons_nav">
 						<div class="block_icon">
 							<img class="block_icon_iconPosition" src="assets/icons/bookmarks_white_24dp.svg" type="svg">
@@ -64,7 +71,7 @@
 					</section>
 			    </a>
 
-				<a href="index2.html">
+				<a href="community.html">
 					<section class="buttons_nav">
 						<div class="block_icon">
 							<img class="block_icon_iconPosition" src="assets/icons/forum_white_24dp.svg" type="svg">
@@ -73,6 +80,8 @@
 					</section>
 			    </a>
 			</nav>
+
+<!------------------------------------------------------ campo do code -->
 
 			<main class="codePreview">
 				<section class="painel__border" onmouseleave="highlightActive()">
@@ -89,6 +98,8 @@
 				</section>
 				<button class="button__viewHightLight button__viewHightLight__disable">remove the mouse from the field to apply the HighLight</button>
 			</main>
+
+<!------------------------------------------------------ configurações do projeto -->
 
 			<section class="configs_preview">
 				<h1 class="myProject__titleYourProject">MY PROJECT</h1>
@@ -128,7 +139,9 @@
 		</section>
         <script src="js/highlight.js"></script>
         <script src="js/RGBmode.js"></script>
-        <script src="js/setProject.js"></script>
-		<script src="js/index.js"></script>
+        <script src="js/command__shortcut.js"></script>       
+        <script src="js/codeEditor/setProject.js"></script>
+        <script src="js/codeEditor/privacyMode.js"></script>
+		<script src="js/codeEditor/index.js"></script>
 	</body>
 </html>

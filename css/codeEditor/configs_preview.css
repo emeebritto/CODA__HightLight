@@ -47,7 +47,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url(../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;
+/*    background: url(../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;*/
     outline: none;
     background-position: 98% 50%;
 	border: none;
@@ -105,7 +105,7 @@
 
 .block_checkbox {
 	border: 1px solid white;
-    background: url(../assets/icons/done_white_24dp.svg) no-repeat center;
+/*    background: url(../assets/icons/done_white_24dp.svg) no-repeat center;*/
 	border-radius: 8px;	
 	height: 23px;
 	width: 23px;
@@ -119,9 +119,9 @@
     border-style: dotted;
 }
 
-.block_checkbox__Checked {
+/*.block_checkbox__Checked {
     background: url(../assets/icons/done_black_24dp.svg) no-repeat center white;
-}
+}*/
 
 .privacyMode__icon {
 	transform: scale(1.1);
