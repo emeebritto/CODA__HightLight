@@ -12,7 +12,7 @@
 }
 
 .myProject__name {
-	background-color: rgba(255, 255, 255, 7%);
+	background-color: rgba(255, 255, 255, 4%);
 	outline:none;
 	border: none;
 	border-radius: 8px;
@@ -26,7 +26,7 @@
 }
 
 .myProject__description {
-	background-color: rgba(255, 255, 255, 7%);
+	background-color: rgba(255, 255, 255, 4%);
 	outline:none;
 	color: white;
 	padding-top: 7px;
@@ -34,7 +34,44 @@
 	font-size: 1.1em;
 	border: none;
 	border-radius: 8px;
-	margin-bottom: 40px;
+	margin-bottom: 19px;
+}
+
+.box__button_Export {
+	display: flex;
+	align-items: center;
+	background: transparent;
+	font-weight: bold;
+	color: #E7E7E7;
+	border: none;
+	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	width: 45%;
+	height: 6%;
+	margin-left: 27.5%;
+	margin-bottom: 20px;
+	border: 1px solid #343434;
+	transition: .2s;
+}
+
+.text_export {
+	margin-left: 20px;
+	color: white;
+}
+
+.button_Export {
+	margin-left: 15px;
+	transform: scale(1.3);
+}
+
+.box__button_Export:hover {
+	cursor: pointer;
+	background-color: #221B91;
+	border: 1px solid #221B91;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
 }
 
 .personalization__title {
@@ -49,7 +86,6 @@
     -moz-appearance: none;
 /*    background: url(../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;*/
     outline: none;
-    background-position: 98% 50%;
 	border: none;
 	border-radius: 8px;
 	color: white;
@@ -132,7 +168,8 @@
 	font-weight: bold;
 	color: #E7E7E7;
 	border: none;
-	border-radius: 8px;
+	border-top-right-radius: 11px;
+	border-bottom-left-radius: 11px;
 	height: 8%;
 	transition: .2s;
 }
@@ -141,5 +178,8 @@
 	cursor: pointer;
 	color: white;
 	background-color: #1D77D6;
-	box-shadow: 1px 1px 15px #218BBD;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 11px;
+	border-bottom-right-radius: 11px;
 }

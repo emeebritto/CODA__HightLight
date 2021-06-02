@@ -1,8 +1,9 @@
 .container {
 	display: grid;
-	height: 35em;
+	height: 37.2em;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: auto;
+	background-color: ;
 }
 
 .menu {

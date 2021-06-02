@@ -5,7 +5,7 @@
 .painel__border {
 	background-color: #5a3aa1;
 	border-radius: 9px;
-	min-height: 68%;
+	min-height: 64%;
 	margin-bottom: 30px;
 	transition: 2s;
 }
@@ -24,7 +24,7 @@
 }
 
 .painel__border:hover {
-	box-shadow: 0px 0px 30px #5E02FF;
+	box-shadow: 0px 0px 20px #5E02FF;
 }
 
 .box__buttons__decoration {

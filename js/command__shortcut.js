@@ -7,3 +7,13 @@ searchBar.addEventListener("input", function(){
         window.location.reload()
     }
 })
+
+var searchBarFloat = document.querySelector(".command__shortcut");
+
+searchBarFloat.addEventListener("input", function(){
+    if (searchBarFloat.value == "/clearStorage"){
+        localStorage.clear();
+        alert("O localStorage foi resetado com sucesso");
+        window.location.reload()
+    }
+})

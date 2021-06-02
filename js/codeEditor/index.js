@@ -55,3 +55,19 @@ function activeAlert(){
     button.classList.remove("button__viewHightLight__disable");
 }
 
+/*---------------------------------------------------------------------------------*/
+
+document.querySelector(".box__button_Export").addEventListener("click", function(){
+    var projectName = document.querySelector(".myProject__name");
+
+    domtoimage.toBlob(document.getElementById('code')).then(function(blob){
+        if (projectName.value == ""){
+            projectName.value = "myCoda_Highlight";
+        }
+        window.saveAs(blob, projectName.value + ".png")
+        if (projectName.value == "myCoda_Highlight"){
+            projectName.value = "";
+        }
+    })
+
+})

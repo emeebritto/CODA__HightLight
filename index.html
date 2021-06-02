@@ -40,7 +40,7 @@
 
 <!------------------------------------------------------ menu de navegação (lateral) -->
 
-		<section class="container">
+		<section class="container" onmouseenter="getLocation()">
 			<nav class="container_menu">
 				<h1 class="title_nav">MENU</h1>
 
@@ -84,7 +84,7 @@
 <!------------------------------------------------------ campo do code -->
 
 			<main class="codePreview">
-				<section class="painel__border" onmouseleave="highlightActive()">
+				<section class="painel__border" onmouseleave="highlightActive()" id="code">
 					<div class="painel__code" onmouseenter="activeAlert()">
 						<div class="box__buttons__decoration">
 							<div class="button__decoration__red buttons__decoration"></div>
@@ -103,8 +103,12 @@
 
 			<section class="configs_preview">
 				<h1 class="myProject__titleYourProject">MY PROJECT</h1>
-				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Name">
+				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Name" value="">
 				<textarea class="myProject__description" cols="30" rows="4" type="search" name="DescricaoProjeto" style="resize: none" placeholder="Comment..."></textarea>
+				<section class="box__button_Export">
+					<p class="text_export">Export</p>
+					<img class="button_Export" src="assets/icons/file_download_white_24dp.svg" >
+				</section>
 				<h1 class="personalization__title">PERSONALIZATION</h1>
 				<select class="personalization__selectorLanguagem">
 				    <option id="select_op">JavaScript</option>
@@ -143,5 +147,7 @@
         <script src="js/codeEditor/setProject.js"></script>
         <script src="js/codeEditor/privacyMode.js"></script>
 		<script src="js/codeEditor/index.js"></script>
+	    <script src="js/dom-to-image.min.js"></script>
+	    <script src="js/FileSaver.js"></script>
 	</body>
 </html>

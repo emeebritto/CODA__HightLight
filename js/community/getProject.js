@@ -63,11 +63,11 @@ function createCard(project) {
 		        		</div>
 		        		<div class="field_feedbacks__commits">
 		        			<img class="icons_feedback icon_commits" src="assets/icons/icon_feedBack.svg">
-		        			<p class="num_feedbacks num_commits">34</p>
+		        			<p class="num_feedbacks num_commits">0</p>
 		        		</div>
 		        		<div class="field_feedbacks__likes">
 		        			<img class="icons_feedback icon_likes" src="assets/icons/icon_like.svg">
-		        			<p class="num_feedbacks num_likes">56</p>
+		        			<p class="num_feedbacks num_likes">0</p>
 		        		</div>
 		        	</div>
 					<div class="painel_code__codePreview">
