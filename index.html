@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="--borderHover: #5E02FF;">
 	<head>
 		<meta charset="utf-8">
 		<title>CODA - HightLight Editor</title>
@@ -40,7 +40,7 @@
 
 <!------------------------------------------------------ menu de navegação (lateral) -->
 
-		<section class="container" onmouseenter="getLocation()">
+		<section class="container">
 			<nav class="container_menu">
 				<h1 class="title_nav">MENU</h1>
 
@@ -99,16 +99,18 @@
 				<button class="button__viewHightLight button__viewHightLight__disable">remove the mouse from the field to apply the HighLight</button>
 			</main>
 
+<!------------------------------------------------------ alert - successful Upload -->
+
+			<span class="alert__successfulUpload" style="display: none;">
+				<h1 class="text__successfulUpload">Successful upload</h1>
+			</span>
+
 <!------------------------------------------------------ configurações do projeto -->
 
 			<section class="configs_preview">
 				<h1 class="myProject__titleYourProject">MY PROJECT</h1>
-				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Name" value="">
+				<input class="myProject__name" type="text" name="nameProjeto" placeholder="Name (export)" value="">
 				<textarea class="myProject__description" cols="30" rows="4" type="search" name="DescricaoProjeto" style="resize: none" placeholder="Comment..."></textarea>
-				<section class="box__button_Export">
-					<p class="text_export">Export</p>
-					<img class="button_Export" src="assets/icons/file_download_white_24dp.svg" >
-				</section>
 				<h1 class="personalization__title">PERSONALIZATION</h1>
 				<select class="personalization__selectorLanguagem">
 				    <option id="select_op">JavaScript</option>
@@ -128,7 +130,7 @@
 				    <option id="select_op">Go</option>
 				    <option id="select_op">Swift</option>
 				</select>
-				<input class="personalization__selectorColor" value="#5a3aa1" type="color">
+				<input class="personalization__selectorColor" value="#3A1AB2" type="color">
 				<section class="RGBmode">
 					<img class="modoRGB__icon" src="assets/icons/toggle_off_white_24dp.svg">
 					<p class="modoRGB__text">RGB Mode</p>
@@ -138,9 +140,18 @@
 					</div>
 					<p class="modoRGB__text">Keep Private</p>
 				</section>
-				<button class="personalization__buttonSave">Save and Publish</button>
+				<section class="saveOptions">
+					<section class="box__button_Export">
+						<p class="text_export">Export</p>
+						<img class="button_Export" src="assets/icons/file_download_white_24dp.svg" >
+					</section>
+					<button class="personalization__buttonSave">Save and Publish</button>					
+				</section>
+
 			</section>
+
 		</section>
+
         <script src="js/highlight.js"></script>
         <script src="js/RGBmode.js"></script>
         <script src="js/command__shortcut.js"></script>       
@@ -149,5 +160,6 @@
 		<script src="js/codeEditor/index.js"></script>
 	    <script src="js/dom-to-image.min.js"></script>
 	    <script src="js/FileSaver.js"></script>
+	    <script src="js/contentNPC.js"></script>
 	</body>
 </html>

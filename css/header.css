@@ -1,4 +1,5 @@
 html {
+	max-width: 1366px;
   background: linear-gradient(270deg, #060525, #060525, #07061b, #07061b);
 }
 
@@ -18,7 +19,7 @@ html {
 	justify-content: space-between;
 	height: 4rem;
   width: auto;
-	padding-top: 10px;
+	padding-top: 0px;
 	margin-bottom: 25px;
 	border-bottom: 1px solid #130730;
 }
@@ -26,7 +27,7 @@ html {
 .top__logo__img {
 	position: relative;
 	width: 100%;
-	bottom: 17%;
+	bottom: 13%;
 	overflow: hidden;
 	margin-left: 2.7%;
 	margin-right: 2.8%;

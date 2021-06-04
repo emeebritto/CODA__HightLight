@@ -9,6 +9,7 @@ new function () {
 function showProject() {
 
 	var verification = localStorage.getItem("onCommunity " + 0);
+	localStorage.removeItem("cnpc00");
 
 	if (verification != null){
 
@@ -17,6 +18,8 @@ function showProject() {
 	    for(let i = 0; i < localStorage.length; i++) {
 	        projectCommunity.push(JSON.parse(localStorage.getItem("onCommunity " + i)))
 	    }
+	    localStorage.setItem("cnpc00", "cnpcKey");
+
 	    projectCommunity.forEach(project => {
 	        const card = createCard(project)
 	        if (project.detalhesDoproject.privacyMode == 0) {
@@ -26,6 +29,7 @@ function showProject() {
 		        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
 		        addHighLight(project);
 	        }
+	        NPCards(project, card);
 	    })
 
 	}
@@ -40,7 +44,7 @@ function createCard(project) {
 
     const card = `
         <div class="demoBlock" data-id="${project.onCommunity}" style=${project.detalhesDoproject.orderList}>
-        	<section class="painel_border__CodePost" style="background-color: ${project.detalhesDoproject.selectedColor}">
+        	<section class="painel_border__CodePost" style="border-color: ${project.detalhesDoproject.selectedColor}">
 
         		<div class="contentSendFor">
 		            <img class="contentSendFor__perfil_img" src="assets/img/img-perfil.png">
@@ -183,7 +187,15 @@ function postFilter(){
     }
 }
 
-
+function NPCards(project, card) {
+	if (project.detalhesDoproject.privacyMode == 3){
+	    communityPag.innerHTML += card
+        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCommunity}"]`)
+        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCommunity}"]`))
+        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
+        addHighLight(project);
+	}
+}
 
 // project.detalhesDoproject.projectName
 // project.detalhesDoproject.projectDescription

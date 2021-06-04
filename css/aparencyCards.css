@@ -4,11 +4,14 @@
 	margin: 5px 15px 5px 0;
 	background-color: rgb(0 0 0 / 27%);
 	border-radius: 9px;
+	opacity: 0%; 
+	animation: 700ms start_cards forwards;
 }
 
 .painel_border__CodePost {
-	background-color: #5a3aa1;
+	background-color: transparent;
 	border-radius: 9px;
+	border: 2px solid;
 	height: 100%;
 	margin-bottom: 26px;
 }
@@ -73,9 +76,12 @@
 }
 
 .descriptionProject {
-	color: white;
-	font-family: 'Abel', sans-serif;
-	margin-bottom: 20px;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    margin-bottom: 15px;
+    max-width: 97%;
+    overflow-y: hidden;
+    max-height: 23px;
 }
 
 .box_codePreview_FeedBacks {
@@ -212,4 +218,8 @@
 	height: 80%;
 	font-size: 1.1em;
 	margin-top: 3px;
+}
+
+@keyframes start_cards {
+	to { opacity: 100%; }
 }

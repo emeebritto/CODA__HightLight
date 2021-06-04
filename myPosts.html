@@ -6,19 +6,17 @@
 		<meta name="viewport" content="width=device-width">
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Abel&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/menu_nav.css">
-		<link rel="stylesheet" href="css/darcula.css">
 		<link rel="stylesheet" href="css/aparencyCards.css">		
 		<link rel="stylesheet" href="css/myPosts/gridSystem__myPosts.css">
 		<link rel="stylesheet" href="css/myPosts/myHighLightPag.css">
+		<link rel="stylesheet" href="css/darcula.css">
         <link rel="stylesheet" href="css/myPosts/responsive__myPostPag.css">
+		<link rel="stylesheet" href="css/hearderFloat.css">
+		<link rel="stylesheet" href="css/arrowUp.css">
 		<link rel="icon" href="assets/icon.png">
 	</head>
 
@@ -92,9 +90,32 @@
 					<p class="noContent__text">Sem rastros de Publicações por aqui</p>
 				</span>
 			</main>
+
+<!------------------------------------------------------ arrowUp -->
+
+		<span class="circle_arrowUp" style="transition: 600ms; display: none;">
+			<img class="circle_arrowUp__icon" src="assets/icons/keyboard_arrow_up_white_24dp.svg">
+		</span>
+
 		</section>
+
+<!------------------------------------------------------ hearder flutuante -->
+
+		<header class="top__pagFloat inSroll command__shortcut" style="transition: 600ms; display: none;">
+			<a href="index.html" id="tagAheaderFloat">
+				<img class="top__logo__imgFloat" src="assets/img/logo_coda.png">
+			</a>
+			<input class="top__searchFloat" type="search" name="search" placeholder="Search in 'Community'">
+
+			<section class="campo__perfilFloat">
+				<img class="campo__perfil__img" src="assets/img/img-perfil.png">
+				<p class="campo__perfil__name">Emerson_Britto</p>
+			</section>
+		</header>
+		
         <script src="js/highlight.js"></script>
         <script src="js/getProjectMyPost.js"></script>
         <script src="js/command__shortcut.js"></script>
+        <script src="js/scrollSystem.js"></script>
 	</body>
 </html>

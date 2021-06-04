@@ -32,5 +32,6 @@ function modoRGB(){
     gg = Math.floor(Math.random() * 151);
     bb = Math.floor(Math.random() * 151);
     formatacaoRGB = 'rgb('+ rr + "," + gg + "," + bb +')' ;
-    borderColor.style.backgroundColor = formatacaoRGB;
+/*    borderColor.style.backgroundColor = formatacaoRGB;*/
+    borderColor.style.borderColor = formatacaoRGB;
 };

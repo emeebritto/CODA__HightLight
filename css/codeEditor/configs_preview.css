@@ -1,6 +1,7 @@
 .configs_preview {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -9,6 +10,8 @@
 	margin-bottom: 15px;
 	color: white;
 	font-family: 'Abel', sans-serif;
+	transform: translateX(60%);
+    animation: 600ms start_configPreview forwards;
 }
 
 .myProject__name {
@@ -23,6 +26,8 @@
 	padding-bottom: 14px;
 	font-size: 1.1em;
 	color: white;
+	transform: translateX(100%);
+    animation: 600ms start_configPreview forwards 200ms;
 }
 
 .myProject__description {
@@ -35,62 +40,32 @@
 	border: none;
 	border-radius: 8px;
 	margin-bottom: 19px;
-}
-
-.box__button_Export {
-	display: flex;
-	align-items: center;
-	background: transparent;
-	font-weight: bold;
-	color: #E7E7E7;
-	border: none;
-	border-top-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	width: 45%;
-	height: 6%;
-	margin-left: 27.5%;
-	margin-bottom: 20px;
-	border: 1px solid #343434;
-	transition: .2s;
-}
-
-.text_export {
-	margin-left: 20px;
-	color: white;
-}
-
-.button_Export {
-	margin-left: 15px;
-	transform: scale(1.3);
-}
-
-.box__button_Export:hover {
-	cursor: pointer;
-	background-color: #221B91;
-	border: 1px solid #221B91;
-	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-top-right-radius: 8px;
-	border-bottom-left-radius: 8px;
+	transform: translateX(100%);
+    animation: 600ms start_configPreview forwards 300ms;
 }
 
 .personalization__title {
 	color: white;
 	margin-bottom: 15px;
 	font-family: 'Abel', sans-serif;
+	transform: translateX(100%);
+    animation: 600ms start_configPreview forwards 400ms;
 }
 
 .personalization__selectorLanguagem {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-/*    background: url(../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;*/
+    background: url(../../assets/icons/expand_more_white_24dp.svg) no-repeat center right #19182b;
+    background-position: 98% 50%;
     outline: none;
 	border: none;
 	border-radius: 8px;
 	color: white;
 	padding: 14px 16px 16px 14px;
 	margin-bottom: 15px;
+	transform: translateX(100%);
+    animation: 600ms start_configPreview forwards 500ms;
 }
 
 .personalization__selectorLanguagem:hover {
@@ -105,6 +80,8 @@
 	height: 8.3%;
 	border-radius: 8px;
 	margin-bottom: 12px;
+	transform: translateX(100%);
+    animation: 600ms start_configPreview forwards 600ms;
 }
 
 #select_op {
@@ -116,6 +93,8 @@
 	align-items: center;
 	margin-left: 15px;
 	margin-bottom: 23px;
+	transform: translateX(101%);
+    animation: 600ms start_configPreview forwards 700ms;
 }
 
 .modoRGB__icon {
@@ -137,11 +116,13 @@
 	align-items: center;
 	margin-left: 12px;
 	margin-bottom: 15px;
+	transform: translateX(101%);
+    animation: 600ms start_configPreview forwards 800ms;
 }
 
 .block_checkbox {
 	border: 1px solid white;
-/*    background: url(../assets/icons/done_white_24dp.svg) no-repeat center;*/
+    background: url(../../assets/icons/done_white_24dp.svg) no-repeat center;
 	border-radius: 8px;	
 	height: 23px;
 	width: 23px;
@@ -155,23 +136,80 @@
     border-style: dotted;
 }
 
-/*.block_checkbox__Checked {
-    background: url(../assets/icons/done_black_24dp.svg) no-repeat center white;
-}*/
+.block_checkbox__Checked {
+    background: url(../../assets/icons/done_black_24dp.svg) no-repeat center white;
+}
 
 .privacyMode__icon {
 	transform: scale(1.1);
 }
 
+.saveOptions {
+	display: flex;
+	height: 8%;
+}
+
+.box__button_Export {
+	display: flex;
+	align-items: center;
+	background: transparent;
+	font-weight: bold;
+	color: #E7E7E7;
+	border: none;
+	border-top-left-radius: 11px;
+	border-bottom-right-radius: 11px;
+	width: 45%;
+	height: 100%;
+	margin-left: 2%;
+	margin-bottom: 20px;
+	border: 1px solid #343434;
+	transition: .2s;
+	transform: translateX(250%);
+    animation: 600ms start_configPreview forwards 900ms;
+}
+
+.text_export {
+	margin-left: 10px;
+	color: white;
+}
+
+.button_Export {
+	margin-left: 15px;
+	margin-right: 10px;
+	transform: scale(1.3);
+}
+
+.box__button_Export:hover {
+	cursor: pointer;
+	background-color: #221B91;
+	border: 1px solid #221B91;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 11px;
+	border-bottom-left-radius: 11px;
+}
+
 .personalization__buttonSave {
+	outline:none;
+	background: url(../../assets/img/Purple-Background.jpg);
+	background-position: 115% 0%;
+	background-repeat: no-repeat;
 	background-color: #5081FB;
 	font-weight: bold;
 	color: #E7E7E7;
 	border: none;
 	border-top-right-radius: 11px;
 	border-bottom-left-radius: 11px;
-	height: 8%;
+	height: 100%;
+	width: 100%;
 	transition: .2s;
+	transform: translateX(101%);
+    animation: 600ms start_configPreview forwards 1000ms;
+}
+
+.loading-upload {
+	transition: 7s !important;
+	background-position: 0% 0% !important;
 }
 
 .personalization__buttonSave:hover {
@@ -182,4 +220,10 @@
 	border-bottom-left-radius: 0px;
 	border-top-left-radius: 11px;
 	border-bottom-right-radius: 11px;
+}
+
+@keyframes start_configPreview {
+	to {
+		transform: translateX(0%);
+	}
 }

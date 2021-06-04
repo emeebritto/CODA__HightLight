@@ -1,9 +1,9 @@
 .container {
+	position: relative;
 	display: grid;
-	height: 37.2em;
+	height: calc(100vh - 90px);
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: auto;
-	background-color: ;
 }
 
 .menu {
@@ -13,6 +13,7 @@
 }
 
 .codePreview {
+	position: relative;
 	background-color: ;
 	grid-column: 2/3;
 	grid-row: 1/2;

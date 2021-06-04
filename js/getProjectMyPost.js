@@ -16,23 +16,23 @@ function showProject() {
 	        projectCommunity.push(JSON.parse(localStorage.getItem("onCommunity " + i)))
 	    }
 	    projectCommunity.forEach(project => {
-	        const card = createCard(project)
-        	myPosts.innerHTML += card
-            const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onCommunity}"]`)
-	        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
-	        addHighLight(project);
-   		
-			if (project.detalhesDoproject.privacyMode == 1) {
-				boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
-				codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
-				boxFeedbacks.classList.add("field_feedbacks__Off");
-				boxFeedbacks.classList.remove("field_feedbacks");
-				codePreview.classList.add("painel_code__codePreview__NoFeed");
-				console.log(project.detalhesDoproject.privacyMode);
-			}
-
+		    if (project.detalhesDoproject.privacyMode != 3){
+		        const card = createCard(project)
+	        	myPosts.innerHTML += card
+	            const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onCommunity}"]`)
+		        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
+		        addHighLight(project);
+	   		
+				if (project.detalhesDoproject.privacyMode == 1) {
+					boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
+					codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
+					boxFeedbacks.classList.add("field_feedbacks__Off");
+					boxFeedbacks.classList.remove("field_feedbacks");
+					codePreview.classList.add("painel_code__codePreview__NoFeed");
+					console.log(project.detalhesDoproject.privacyMode);
+				}
+	    	}
 	    })
-
 	}
 
 	if (verification == null){
@@ -52,7 +52,7 @@ function createCard(project) {
 
     const card = `
         <div class="demoBlock" data-id="${project.onCommunity}" style=${project.detalhesDoproject.orderList}>
-        	<section class="painel_border__CodePost" style="background-color: ${project.detalhesDoproject.selectedColor}">
+        	<section class="painel_border__CodePost" style="border-color: ${project.detalhesDoproject.selectedColor}">
 
         		<div class="contentSendFor">
 		            <img class="contentSendFor__perfil_img" src="assets/img/img-perfil.png">
@@ -75,11 +75,11 @@ function createCard(project) {
 		        		</div>
 		        		<div class="field_feedbacks__commits">
 		        			<img class="icons_feedback icon_commits" src="assets/icons/icon_feedBack.svg">
-		        			<p class="num_feedbacks num_commits">34</p>
+		        			<p class="num_feedbacks num_commits">0</p>
 		        		</div>
 		        		<div class="field_feedbacks__likes">
 		        			<img class="icons_feedback icon_likes" src="assets/icons/icon_like.svg">
-		        			<p class="num_feedbacks num_likes">56</p>
+		        			<p class="num_feedbacks num_likes">0</p>
 		        		</div>
 		        	</div>
 					<div class="painel_code__codePreview">

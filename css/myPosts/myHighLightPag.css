@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Odibee+Sans&display=swap');
+
 .myPosts {
 	display: flex;
 	flex-wrap: wrap;
@@ -6,7 +8,7 @@
 .highLightbyNameUser {
 	color: white;
 	font-size: 2em;
-	font-family: 'Odibee Sans', cursive;
+	font-family: 'Odibee Sans', sans-serif;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #130730;
 	margin-top: 20px;

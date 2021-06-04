@@ -8,7 +8,7 @@ searchBar.addEventListener("input", function(){
     }
 })
 
-var searchBarFloat = document.querySelector(".command__shortcut");
+var searchBarFloat = document.querySelector(".top__searchFloat");
 
 searchBarFloat.addEventListener("input", function(){
     if (searchBarFloat.value == "/clearStorage"){

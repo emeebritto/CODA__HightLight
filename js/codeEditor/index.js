@@ -1,23 +1,16 @@
 (function(){
   var borderColor  = document.querySelector('.painel__border'),
-      color = document.querySelector('input[type=color]');
+      color = document.querySelector('input[type=color]'),
+      body = document.querySelector('body');
   
   color.addEventListener('input', function(){
 
-    borderColor.style.backgroundColor = this.value;
+/*    borderColor.style.backgroundColor = this.value;*/
+    borderColor.style.borderColor = this.value;
+    document.documentElement.style.setProperty("--borderHover", this.value);
   });
   
 })();
-
-var searchBar = document.querySelector(".top__search");
-
-searchBar.addEventListener("input", function(){
-    if (searchBar.value == "/clearStorage"){
-        localStorage.clear();
-        alert("O localStorage foi resetado com sucesso");
-        searchBar.value = "";
-    }
-})
 
 const fieldCode = document.querySelector('.wrapper_code');
 const languagem = document.querySelector('.personalization__selectorLanguagem');
@@ -62,10 +55,10 @@ document.querySelector(".box__button_Export").addEventListener("click", function
 
     domtoimage.toBlob(document.getElementById('code')).then(function(blob){
         if (projectName.value == ""){
-            projectName.value = "myCoda_Highlight";
+            projectName.value = "myCoda_Highlight ("+ languagem.value + ")";
         }
         window.saveAs(blob, projectName.value + ".png")
-        if (projectName.value == "myCoda_Highlight"){
+        if (projectName.value == "myCoda_Highlight ("+ languagem.value + ")"){
             projectName.value = "";
         }
     })
