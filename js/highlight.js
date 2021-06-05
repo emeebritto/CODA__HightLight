@@ -169,7 +169,7 @@ for(let s=n.firstChild;s;s=s.nextSibling)3===s.nodeType?i+=s.nodeValue.length:1=
 event:"start",offset:i,node:s}),i=e(s,i),C(s).match(/br|hr|img|input/)||t.push({
 event:"stop",offset:i,node:s}));return i}(e,0),t}const $={},U=e=>{
 console.error(e)},z=(e,...t)=>{console.log("WARN: "+e,...t)},K=(e,t)=>{
-$[`${e}/${t}`]||(console.log(`Deprecated as of ${e}. ${t}`),$[`${e}/${t}`]=!0)
+$[`${e}/${t}`]||(console.log(`CODA by Emerson_Britto`),$[`${e}/${t}`]=!0)
 },G=s,V=a,W=Symbol("nomatch");return(e=>{
 const n=Object.create(null),s=Object.create(null),a=[];let r=!0
 ;const l=/(^(<[^>]+>|\t|)+|\n)/gm,o="Could not find the language '{}', did you forget to load/include a language module?",g={

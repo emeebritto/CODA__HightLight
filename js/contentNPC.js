@@ -77,30 +77,33 @@ if (vnpc == null){
 
 	for(var i = 0; i < nameUser.length; i++){
 
+		var imgUser = nameUser[i];
+
 		var project = createProject(i);
         setLocalStorage(project);
 
 		function createProject(i) {
 
-		    let project = {'onCommunity': applyIdCommunity(), 'detalhesDoproject': {'projectName': "none", 'projectDescription': description[i], 'selectedLanguagem': codeLanguagem[i], 'code': codeUser[i], 'selectedColor': colorPostUser[i], 'RGBmode': "none", 'privacyMode': "3", 'timepost': timepostUser[i], 'orderList': applyOrder()}
+		    let project = {'onCoda': applyCodaId(), 'detalhesDoproject': {'projectName': "none", 'projectDescription': description[i], 'selectedLanguagem': codeLanguagem[i], 'code': codeUser[i], 'selectedColor': colorPostUser[i], 'RGBmode': "none", 'privacyMode': "3", 'timepost': timepostUser[i], 'orderList': applyOrder(), 'user': {'nameUser': nameUser[i], 'imgUser': `assets/imgUsers/${imgUser}.png`}}
 		    }
 		    return project;
 		}
 
-		function applyIdCommunity() {
+		function applyCodaId() {
 			for (var i = 0; i <= localStorage.length; i++) {
-				var verificaoNPC = localStorage.getItem("onCommunity " + i);
+				var verificaoNPC = localStorage.getItem("onCoda " + i);
 				if (verificaoNPC == null){
-				    return "onCommunity " + i;
+				    return "onCoda " + i;
 				}
 			}
 		}
 
 		function applyOrder() {
 		    for (var i = 0; i <= localStorage.length; i++) {
-		        var verifyOrderNPC = localStorage.getItem("onCommunity " + i);
+		        var verifyOrderNPC = localStorage.getItem("codaX " + i);
 		        if (verifyOrderNPC == null){
 		            var temp = 99999 - i;
+		            localStorage.setItem("codaX " + i, "counterCoda");
 		            return "order:" + temp;
 		        }
 		    }
@@ -108,7 +111,7 @@ if (vnpc == null){
 
 
 		function setLocalStorage(objetoJson) {
-		    localStorage.setItem(objetoJson.onCommunity, JSON.stringify(objetoJson));
+		    localStorage.setItem(objetoJson.onCoda, JSON.stringify(objetoJson));
 		}
 	}
 	localStorage.setItem("cnpc00", "cnpcKey");

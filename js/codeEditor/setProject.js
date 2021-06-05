@@ -5,6 +5,8 @@ var selectedColor = document.querySelector('input[type=color]');
 var rgb__btn = document.querySelector(".modoRGB__icon");
 var blockCheck = document.querySelector(".block_checkbox");
 var codeField = document.querySelector(".wrapper_code");
+var nameUser = "Emerson_Britto";
+var imgUser = nameUser;
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -18,7 +20,6 @@ save__btn.addEventListener("click", function(){
 
 
     var rgb = hexToRGBA(selectedColor.value);
-    console.log(rgb);
     var rgbSemVirgula = rgb.replace(/,/g, "  ");
     var rgbNumComBarra = rgbSemVirgula.replace("rgba(", "    ");
     var rgbNum = rgbNumComBarra.replace(")", "  ");
@@ -28,14 +29,10 @@ save__btn.addEventListener("click", function(){
     var rNum = parseInt(rgbRstr);
     var gNum = parseInt(rgbGstr);
     var bNum = parseInt(rgbBstr);
-    console.log(rNum); console.log(gNum); console.log(bNum); console.log("-----------------");
-
 
     if (rNum > 150){ rNum = rNum - (rNum - 150); }     
     if (gNum > 150){ gNum = gNum - (gNum - 150); }
     if (bNum > 150){ bNum = bNum - (bNum - 150); }
-
-    console.log(rNum); console.log(gNum); console.log(bNum);
 
     RGBResult = 'rgb('+ rNum + "," + gNum + "," + bNum +')' ;
 
@@ -46,32 +43,45 @@ save__btn.addEventListener("click", function(){
         setLocalStorage(project);
         return
     } else {
-        console.log('Browser incompatible');
+        console.log('localStorage - Browser incompatible');
         return
     }
 });
 
 function createProject() {
     var daten = Date.now();
-    let project = {'onCommunity': applyIdCommunity(), 'detalhesDoproject': {'projectName': projectName.value, 'projectDescription': projectDescription.value, 'selectedLanguagem': languagem.value, 'code': codeField.querySelector('code').innerText, 'selectedColor': RGBResult, 'RGBmode': rgb__btn.value, 'privacyMode': blockCheck.value, 'timepost': daten, 'orderList': applyOrder()}
+    let project = {'onCoda': applyCodaId(), 'onPrivacy': applyId(), 'detalhesDoproject': {'projectName': projectName.value, 'projectDescription': projectDescription.value, 'selectedLanguagem': languagem.value, 'code': codeField.querySelector('code').innerText, 'selectedColor': RGBResult, 'RGBmode': rgb__btn.value, 'privacyMode': blockCheck.value, 'timepost': daten, 'orderList': applyOrder(), 'user': {'nameUser': nameUser, 'imgUser': `assets/imgUsers/${imgUser}.png`}}
     }
     return project;
 }
 
-function applyIdCommunity() {
-	for (var i = 0; i <= localStorage.length; i++) {
-		var verificao = localStorage.getItem("onCommunity " + i);
-		if (verificao == null){
-		    return "onCommunity " + i;
-		}
-	}
+function applyCodaId() {
+    if (blockCheck.value == 0){
+        for (var i = 0; i <= localStorage.length; i++) {
+            var verificao = localStorage.getItem("onCoda " + i);
+            if (verificao == null){
+                return "onCoda " + i;
+            }
+        }        
+    }
+    return "none";
+}
+
+function applyId() {
+    for (var i = 0; i <= localStorage.length; i++) {
+        var verificao = localStorage.getItem(`by ${nameUser} ` + i);
+        if (verificao == null){
+            return `by ${nameUser} ` + i;
+        }
+    }
 }
 
 function applyOrder() {
     for (var i = 0; i <= localStorage.length; i++) {
-        var verifyOrder = localStorage.getItem("onCommunity " + i);
+        var verifyOrder = localStorage.getItem("codaX " + i);
         if (verifyOrder == null){
             var temp = 99999 - i;
+            localStorage.setItem("codaX " + i, "counterCoda")
             return "order:" + temp;
         }
     }
@@ -84,7 +94,10 @@ function setLocalStorage(objetoJson) {
     projectName.value = "";
     projectDescription.value = "";
     codeField.querySelector('code').innerText = "";
-    localStorage.setItem(objetoJson.onCommunity, JSON.stringify(objetoJson));
+    if (objetoJson.onCoda != "none"){
+        localStorage.setItem(objetoJson.onCoda, JSON.stringify(objetoJson));        
+    }
+    localStorage.setItem(objetoJson.onPrivacy, JSON.stringify(objetoJson));
 }
 
 function hexToRGBA(hex, opacity) {

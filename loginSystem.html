@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CODA - Login & Register</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/loginSystem/background.css">
+		<link rel="stylesheet" type="text/css" href="css/loginSystem/element-background.css">
+		<link rel="stylesheet" href="css/loginSystem/box-login.css">
+	</head>
+	<body>
+		<section class="container_background">
+			
+			<img class="top_logo__img" src="assets/img/logo_coda.png">
+
+			<section class="box__titleSlogan">
+
+				<h1 class="titleSlogan">Style is Life_</h1>
+				<h2 class="subTitleSlogan"><strong id="show">Show</strong> your code in <strong id="coda">CODA</strong> style</h2>
+			</section>
+			<section class="box__Login">
+				<section class="box__linkToRegister">
+					<p class="title_linkToRegister">Login</p>
+					<img class="icon_linkToRegister" src="assets/icons/arrow_forward_ios_white_24dp.svg">
+				</section>
+				<section class="box__campo_login">
+					<p class="title_register">Sign Up</p>
+				    <form class="campo_login">
+						<label for="nameUserLogin" class="title_Login">Username</label>
+						<input type="text" id="nameUserLogin" class="input_Login" required placeholder="Emerson_Britto">
+
+						<label for="emailLogin" class="title_Login">Email</label>
+						<input type="email" id="emailLogin" class="input_Login" required placeholder="seuemail@dominio.com">
+
+					    <label for="passwordLogin" class="title_Login">Password</label>
+		                <input type="password" id="passwordLogin" class="input_Login" required>
+
+					    <label for="passwordLogin" class="title_Login">retype your password</label>
+		                <input type="password" id="passwordLogin" class="input_Login">
+
+						<section class="box_NoRobot">
+							<div class="block_checkbox"></div>
+							<p class="NoRobot_title">I'm not a robot</p>
+						</section>
+
+						<input type="submit" value="Sign Up" class="SignUp">
+				    </form>
+				</section>
+			</section>
+		</section>
+
+		<script src="js/loginSystem/NoRobot.js"></script>
+	</body>
+</html>

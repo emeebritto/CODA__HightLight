@@ -28,9 +28,9 @@ rgb__btn.addEventListener('click', function(){
 
 function modoRGB(){
     borderColor  = document.querySelector('.painel__border');
-    rr = Math.floor(Math.random() * 151);
-    gg = Math.floor(Math.random() * 151);
-    bb = Math.floor(Math.random() * 151);
+    rr = Math.floor(Math.random() * 161);
+    gg = Math.floor(Math.random() * 161);
+    bb = Math.floor(Math.random() * 161);
     formatacaoRGB = 'rgb('+ rr + "," + gg + "," + bb +')' ;
 /*    borderColor.style.backgroundColor = formatacaoRGB;*/
     borderColor.style.borderColor = formatacaoRGB;

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Staatliches&display=swap');
+
+.top_logo__img {
+	position: absolute;
+	width: 140px;
+	left: 1%;
+}
+
+.box__titleSlogan {
+	position: relative;
+	top: 65%;
+	left: 10%;
+	width: 60%;
+	height: 10%;
+}
+
+.titleSlogan {
+	color: white;
+	font-size: 5.3em;
+	font-family: 'Staatliches', cursive;
+}
+
+#coda {font-weight: bold; color: #6A5CD6;}
+
+#show {font-weight: bold; color: green;}
+
+.subTitleSlogan {
+	color: white;
+	font-size: 2em;
+	font-family: 'Quicksand', sans-serif;
+}

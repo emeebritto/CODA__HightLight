@@ -1,6 +1,7 @@
 var communityPag = document.querySelector(".communityPag");
 var boxNoContent = document.querySelector(".box__noContent");
 let projectWithoutPrivacy = [];
+var cnpc = 1;
 
 new function () {
     showProject()
@@ -8,28 +9,25 @@ new function () {
 
 function showProject() {
 
-	var verification = localStorage.getItem("onCommunity " + 0);
-	localStorage.removeItem("cnpc00");
+	var verification = localStorage.getItem("onCoda " + 0);
 
 	if (verification != null){
 
 	    let projectCommunity = []
 	    projectWithoutPrivacy = [];
 	    for(let i = 0; i < localStorage.length; i++) {
-	        projectCommunity.push(JSON.parse(localStorage.getItem("onCommunity " + i)))
+	    	if (localStorage.getItem("onCoda " + i) != null){
+	            projectCommunity.push(JSON.parse(localStorage.getItem("onCoda " + i)))	    		
+	    	}
 	    }
-	    localStorage.setItem("cnpc00", "cnpcKey");
 
 	    projectCommunity.forEach(project => {
 	        const card = createCard(project)
-	        if (project.detalhesDoproject.privacyMode == 0) {
-	        	communityPag.innerHTML += card
-		        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCommunity}"]`)
-		        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCommunity}"]`))
-		        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
-		        addHighLight(project);
-	        }
-	        NPCards(project, card);
+        	communityPag.innerHTML += card
+	        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCoda}"]`)
+	        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCoda}"]`))
+	        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
+	        addHighLight(project);
 	    })
 
 	}
@@ -43,12 +41,12 @@ function createCard(project) {
 	var dateNF = timeSince(project.detalhesDoproject.timepost);
 
     const card = `
-        <div class="demoBlock" data-id="${project.onCommunity}" style=${project.detalhesDoproject.orderList}>
+        <div class="demoBlock" data-id="${project.onCoda}" style=${project.detalhesDoproject.orderList}>
         	<section class="painel_border__CodePost" style="border-color: ${project.detalhesDoproject.selectedColor}">
 
         		<div class="contentSendFor">
-		            <img class="contentSendFor__perfil_img" src="assets/img/img-perfil.png">
-		            <p class="contentSendFor__perfil_name">Emerson_Britto</p>
+		            <img class="contentSendFor__perfil_img" src="${project.detalhesDoproject.user.imgUser}">
+		            <p class="contentSendFor__perfil_name">${project.detalhesDoproject.user.nameUser}</p>
 		            <p class="contentSendFor__timePost">${dateNF}</p>
 		            <section class="box_bookmark">
 		                <img class="contentSendFor__iconBookmark" src="assets/icons/bookmark_border_white_24dp.svg">
@@ -100,7 +98,7 @@ function addHighLight(project){
 }
 
 function highlightActive(project) {
-	const codigoHtml = communityPag.querySelector(`[data-id="${project.onCommunity}"]`);
+	const codigoHtml = communityPag.querySelector(`[data-id="${project.onCoda}"]`);
 	const code = codigoHtml.querySelector('code');
     hljs.highlightBlock(code);
 }
@@ -151,7 +149,7 @@ var primaryClick = 0;
 function postFilter(){
 	if (primaryClick == 1){
 	    for (var i = 0; i < projectWithoutPrivacy.length; i++) {
-	    	postID = "onCommunity " + i;
+	    	postID = "onCoda " + i;
 	        hhh = communityPag.querySelector(`[data-id="${postID}"]`);
 	        if (hhh != null){
 	            hhh.remove();	        	
@@ -164,7 +162,7 @@ function postFilter(){
 
 	btnFilterActive = document.querySelector(".filter_btn__active");
 	for (var i = 0; i < projectWithoutPrivacy.length; i++) {
-        postID = "onCommunity " + i;
+        postID = "onCoda " + i;
 		postFocus = communityPag.querySelector(`[data-id="${postID}"]`);
 		tagCode = postFocus.querySelector(".label_tagCode");
 		if (btnFilterActive.textContent == "All") {
@@ -185,16 +183,6 @@ function postFilter(){
     	boxNoContent = document.querySelector(".box__noContent");
     	boxNoContent.style.display="none";
     }
-}
-
-function NPCards(project, card) {
-	if (project.detalhesDoproject.privacyMode == 3){
-	    communityPag.innerHTML += card
-        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCommunity}"]`)
-        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCommunity}"]`))
-        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
-        addHighLight(project);
-	}
 }
 
 // project.detalhesDoproject.projectName

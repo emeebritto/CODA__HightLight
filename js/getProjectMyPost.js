@@ -1,5 +1,6 @@
 var myPosts = document.querySelector(".myPosts");
 var boxNoContentMyPost = document.querySelector(".box__noContent_myPost");
+var userLoged = "Emerson_Britto";
 
 new function () {
     showProject()
@@ -7,35 +8,35 @@ new function () {
 
 function showProject() {
 
-	var verification = localStorage.getItem("onCommunity " + 0);
+	var verificationUser = localStorage.getItem(`by ${userLoged} ` + 0);
 
-	if (verification != null){
+	if (verificationUser != null){
 
-	    let projectCommunity = []
+	    let projectUser = []
 	    for(let i = 0; i < localStorage.length; i++) {
-	        projectCommunity.push(JSON.parse(localStorage.getItem("onCommunity " + i)))
-	    }
-	    projectCommunity.forEach(project => {
-		    if (project.detalhesDoproject.privacyMode != 3){
-		        const card = createCard(project)
-	        	myPosts.innerHTML += card
-	            const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onCommunity}"]`)
-		        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
-		        addHighLight(project);
-	   		
-				if (project.detalhesDoproject.privacyMode == 1) {
-					boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
-					codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
-					boxFeedbacks.classList.add("field_feedbacks__Off");
-					boxFeedbacks.classList.remove("field_feedbacks");
-					codePreview.classList.add("painel_code__codePreview__NoFeed");
-					console.log(project.detalhesDoproject.privacyMode);
-				}
+	        if (localStorage.getItem(`by ${userLoged} ` + i) != null){
+	            projectUser.push(JSON.parse(localStorage.getItem(`by ${userLoged} ` + i)))	    		
 	    	}
+	    }
+
+	    projectUser.forEach(project => {
+	        const card = createCard(project)
+        	myPosts.innerHTML += card
+            const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`)
+	        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
+	        addHighLight(project);
+   		
+			if (project.detalhesDoproject.privacyMode == 1) {
+				boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
+				codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
+				boxFeedbacks.classList.add("field_feedbacks__Off");
+				boxFeedbacks.classList.remove("field_feedbacks");
+				codePreview.classList.add("painel_code__codePreview__NoFeed");
+			}
 	    })
 	}
 
-	if (verification == null){
+	if (verificationUser == null){
 	    boxNoContentMyPost.style.display="inline-block";
 	}
 }
@@ -51,12 +52,12 @@ function createCard(project) {
 	var dateNF = timeSince(project.detalhesDoproject.timepost);
 
     const card = `
-        <div class="demoBlock" data-id="${project.onCommunity}" style=${project.detalhesDoproject.orderList}>
+        <div class="demoBlock" data-id="${project.onPrivacy}" style=${project.detalhesDoproject.orderList}>
         	<section class="painel_border__CodePost" style="border-color: ${project.detalhesDoproject.selectedColor}">
 
         		<div class="contentSendFor">
-		            <img class="contentSendFor__perfil_img" src="assets/img/img-perfil.png">
-		            <p class="contentSendFor__perfil_name">Emerson_Britto</p>
+		            <img class="contentSendFor__perfil_img" src="${project.detalhesDoproject.user.imgUser}">
+		            <p class="contentSendFor__perfil_name">${project.detalhesDoproject.user.nameUser}</p>
 		            <p class="contentSendFor__timePost">${dateNF}</p>
 		            <section class="box_bookmark">
 		                <img class="contentSendFor__privacyIcon" src=${privacyIcon}>
@@ -108,7 +109,7 @@ function addHighLight(project){
 }
 
 function highlightActive(project) {
-	const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onCommunity}"]`);
+	const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`);
 	const code = codigoHtmlMyPost.querySelector('code');
     hljs.highlightBlock(code);
 }

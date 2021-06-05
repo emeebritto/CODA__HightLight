@@ -1,0 +1,21 @@
+.container_background {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	overflow: hidden;
+	background: linear-gradient(283deg, #051025, #051025, #050A25, #050725, #070525, #070525);
+	grid-template-columns: 65% 35%;
+	grid-template-rows: 100vh;
+}
+
+.box__titleSlogan {
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.box__Login {
+	background-color: ;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
