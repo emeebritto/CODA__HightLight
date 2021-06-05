@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+.community_filterlanguagen {
+	display: flex;
+	align-items: center;
+	height:50px;
+	border-bottom: 1px solid #0c0b2b;
+	margin-bottom: 20px;
+	overflow-y: hidden;
+}
+
+.filter_btn:first-child {
+    margin-left: 18px;
+}
+
+.filter_btn {
+	background-color: #12112b;
+    font-family: 'Abel', sans-serif;
+	color: white;
+	border-radius: 9px;
+	margin-right: 11px;
+	margin-bottom: 5px;
+	padding: 6px 7px 0 7px;
+	height: 24px;
+	transform: translateY(-130%);
+    animation: 400ms start__filter_btn forwards;
+}
+
+.filter_btn:hover {
+    cursor: pointer;
+    background-color: #1f1d44;
+}
+
+.filter_btn__active {
+	background-color: #3e3d6d;
+}
+
+@keyframes start__filter_btn {
+	to {
+		transform: translateY(0%);
+	}
+}

@@ -1,0 +1,21 @@
+.circle_arrowUp {
+	position: fixed;
+	background-color: #145AA4;
+	box-shadow: 5px 5px 20px #040D17;
+	border-radius: 40px;
+	width: 48px;
+	height: 48px;
+	top: 88%;
+	left: 95%;
+}
+
+.circle_arrowUp:hover {
+	cursor: pointer;
+}
+
+.circle_arrowUp__icon {
+	position: relative;
+	transform: scale(1.4);
+	top: 11px;
+	left: 13px;
+}

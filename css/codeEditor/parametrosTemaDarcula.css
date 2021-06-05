@@ -1,0 +1,12 @@
+.hljs {
+  display: block;
+  overflow-x: auto;
+  outline:none;
+  max-width: 33em;
+  margin-top: 8px;
+  margin-left: 15px;
+  padding: 0.9px;
+  font-size: 1.1em;
+  background: #000e1e;
+  color: #bababa;
+}

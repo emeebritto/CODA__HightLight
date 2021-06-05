@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Odibee+Sans&display=swap');
+
+.myPosts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.highLightbyNameUser {
+	color: white;
+	font-size: 2em;
+	font-family: 'Odibee Sans', sans-serif;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #130730;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.box__noContent_myPost {
+	width: 100%;
+	text-align: center;
+}
+
+.noContent__img {
+	position: relative;
+	width: 380px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.noContent__text {
+	color: white;
+	font-size: 1.6em;
+    font-family: 'Abel', sans-serif;
+}
+
+.contentSendFor__privacyIcon {
+/*	position: relative;*/
+	margin-right: 5%;
+	display: inline-block;
+/*	left: 272px;*/
+	transform: scale(1.2);
+}
