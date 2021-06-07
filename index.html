@@ -124,7 +124,7 @@
 					</section>
 			    </a>
 
-				<a id="nav_link__account" href="index.html">
+				<a id="nav_link__account" href="index.html" style="display: none;">
 					<section class="nav_buttons">
 						<div class="block_imgUser">
 							<img class="imgUser" src="assets/img/img-perfil.png">
@@ -132,8 +132,23 @@
 						<div class="box_titleSection">
 						    <p id="box_titleSection_account" class="nav_titleSection">Account</p>
 						</div>
-					</section>					
+					</section>
 				</a>
+                <section id="nav_link__SignUpIn">
+					<section class="nav_buttons">
+						<div class="block_icon__login">
+							<img class="block_icon_iconPosition" src="assets/icons/login_white_24dp.svg">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_SignUpIn" class="nav_titleSection">Sign Up/In</p>
+						</div>
+						<div class="box_select_SignUp_SignIn" style="display: none;">
+							<button class="SignUp_SignIn__button" id="button_signIn">Sign in</button>
+							<button class="SignUp_SignIn__button" id="button_signUp">Sign up</button>
+						</div>
+					</section>
+                </section>
+
 
 				<a id="nav_link__codeEitor" href="index.html">
 					<section class="nav_buttons">
@@ -205,5 +220,6 @@
 	    <script src="js/dom-to-image.min.js"></script>
 	    <script src="js/FileSaver.js"></script>
 	    <script src="js/contentNPC.js"></script>
+	    <script src="js/codeEditor/redirectSign.js"></script>
 	</body>
 </html>

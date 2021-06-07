@@ -43,24 +43,30 @@
 					<p class="title_SignUp">Sign Up</p>
 				    <form class="campo_Register">
 						<label for="nameUserRegister" class="title_Register">Username</label>
-						<input type="text" id="nameUserRegister" class="input_Register" required placeholder="Ex: Emerson_Britto" minlength="5" maxlength="16">
+						<input type="text" id="nameUserRegister" class="input_Register" required placeholder="Ex: Emerson_Britto" minlength="5" maxlength="16" style="border-bottom-color: ">
+						<p class="alert_rept_name" style="display: none; color: #E15B5B;">Name already exists</p>
+						<p class="alert_Short_name" style="display: none; color: #E15B5B;">the name is too short</p>
 
 						<label for="emailRegister" class="title_Register">Email</label>
 						<input type="email" id="emailRegister" class="input_Register" required placeholder="yourmail@domain.com" minlength="13" maxlength="32">
+						<p class="alert_rept_email" style="display: none; color: #E15B5B;">Account already exists with that e-mail address</p>
+						<p class="alert_invalid_email" style="display: none; color: #E15B5B;">The email address you entered is not valid.</p>
 
 					    <label for="passwordRegister" class="title_Register">Password</label>
 		                <input type="password" id="passwordRegister" class="input_Register" minlength="8" maxlength="30" required>
 
 					    <label for="rePasswordRegister" class="title_Register">retype your password</label>
 		                <input type="password" id="rePasswordRegister" class="input_Register">
+						<p class="alert_invalid_password" style="display: none; color: #E15B5B;">different passwords!</p>
+						<p class="alert_short_password" style="display: none; color: #E15B5B;">Please use a password at least 8 characters long.</p>
+
 
 						<section class="box_NoRobot">
 							<div id="checkRobot" class="block_checkbox"></div>
 							<p class="NoRobot_title">I'm not a robot</p>
 						</section>
 
-						<input type="submit" value="Sign Up" class="SignUp" style="background-color: #0F146D; color: #979797;" onclick="getData()">
-						<div class="protectClick"></div>
+						<input type="button" value="Sign Up" class="SignUp" style="background-color: #0F146D; color: #979797;" onclick="getData()">
 				    </form>
 				</section>
 			</section>
@@ -93,7 +99,7 @@
 
 					    <label for="passwordLogin" class="title_Login">Password</label>
 		                <input type="password" id="passwordLogin" class="input_Login" required placeholder="Your Password" minlength="8" maxlength="30">
-
+		                
 						<input type="submit" value="Sign in" class="btn_SignIn">
 				    </form>
 				</section>

@@ -6,15 +6,15 @@ blockCheck.addEventListener("click", function(){
     if (checkRobot == false){
         blockCheck.classList.remove('block_checkbox__Checked')
         blockCheck.value = false;
-        console.log(blockCheck.value);
         checkRobot = true;
+        releaseAcess();
         return
     }
     if (checkRobot == true){
         blockCheck.classList.add('block_checkbox__Checked')
         blockCheck.value = true;
-        console.log(blockCheck.value);
         checkRobot = false;
+        releaseAcess();
         return
     }
 })

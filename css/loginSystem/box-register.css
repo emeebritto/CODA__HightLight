@@ -36,7 +36,7 @@
 	border-radius: 15px;
 	border: 2px solid #0E1271;
 	box-shadow: 5px 5px 25px #091450;
-	height: 480px;
+	min-height: 71%;
 	width: 400px;
 }
 
@@ -54,7 +54,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin: 0px 0px 0px 20px;
+	margin: 0px 0px 14px 20px;
 }
 
 .title_Register {
@@ -73,6 +73,10 @@
 	padding: 0px 10px 0px 10px;
 	width: 340px;
 	height: 32px;
+}
+
+.input_Register_incomplete {
+	border-bottom: 3px solid #991440 !important;
 }
 
 .input_Register:focus {
