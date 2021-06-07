@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 .top_logo__img {
 	position: absolute;
@@ -28,4 +29,146 @@
 	color: white;
 	font-size: 2em;
 	font-family: 'Quicksand', sans-serif;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+
+.elements_background {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color:;
+}
+
+.letters {
+	color: rgb(0 0 0 / 20%);
+	position: absolute;
+	font-size: 9.7em;
+	display: inline-block;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #6100FF;
+    font-family: 'Oswald', sans-serif;
+}
+
+#letter_C {
+	top: 26%;
+	left: 12%;	
+	transform: rotate(-21deg);
+	animation: 13s letter_C infinite alternate;
+}
+
+@keyframes letter_C {
+	from {
+		top: 09%;
+        -webkit-text-stroke-width: 0px;
+		transform: rotate(-6deg);
+	}
+}
+
+#letter_O {
+	top: 26%;
+	left: 20%;
+	transform: rotate(11deg);	
+	animation: 13s letter_O infinite alternate;
+}
+
+@keyframes letter_O {
+	from {
+		top: 42%;
+		left: 29%;
+		-webkit-text-stroke-width: 0px;
+		transform: rotate(-8deg);
+	}
+}
+
+#letter_D {
+	top: 26%;
+	left: 28%;
+	transform: rotate(-4deg);	
+	animation: 13s letter_D infinite alternate;	
+}
+
+@keyframes letter_D {
+	from {
+		top: 7%;
+		left: 29%;
+		-webkit-text-stroke-width: 0px;
+		transform: rotate(-16deg);
+	}
+}
+
+#letter_A {
+	top: 26%;
+	left: 36%;	
+	transform: rotate(4deg);
+	animation: 13s letter_A infinite alternate;	
+}
+
+@keyframes letter_A {
+	from {
+		top: 13%;
+		left: 41%;
+		-webkit-text-stroke-width: 0px;
+		transform: rotate(28deg);
+	}
+}
+
+.icons_background {
+	position: absolute;
+	width: 12%;
+	opacity: 20%;
+}
+
+#icon_moon {
+	top: 48%;
+	left: 46%;
+	transform: rotate(-30deg);
+}
+
+#icon_arrowLeft {
+	top: 29%;
+	left: 2%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #BC0000;
+	transform: rotate(-6deg);
+	animation: 5s icon_arrowLeft infinite alternate;
+}
+
+@keyframes icon_arrowLeft {
+	from {
+		left: 0%;
+	}
+}
+
+#icon_arrowRight {
+	top: 28%;
+	left: 41%;
+	transform: rotate(4deg);
+	animation: 5s icon_arrowRight infinite alternate;
+}
+
+@keyframes icon_arrowRight {
+	from {
+		left: 43%;
+	}
+}
+
+
+#icon_X {
+	left: 36%;
+	transform: rotate(4deg);
+	animation: 20s icon_X infinite alternate;
+}
+
+@keyframes icon_X {
+	from {
+		transform: rotate(-178deg);
+	}
+}
+
+#icon_XTwo {
+	top: 78%;
+	left: 13%;
+	transform: rotate(-11deg);
 }

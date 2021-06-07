@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+.box__linkToRegister {
+	display: flex;
+	background-color: rgb(0 0 0 / 23%);
+	border-radius: 15px;
+	height: 50px;
+	top: 5%;
+	position: relative;
+	width: 204px;
+	margin-left: 200px;
+	align-items: center;
+    justify-content: flex-end;
+}
+
+.box__linkToRegister:hover {
+	cursor: pointer;
+}
+
+.title_linkToRegister {
+	color: white;
+	font-weight: bold;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.icon_linkToRegister {
+	margin: 0px 16px 0px 15px;
+	transform: scale(1.3);
+}
+
+.box__campo_Register{
+	position: relative;
+	top: 8%;
+	background-color: rgb(0 0 0 / 25%);
+	border-radius: 15px;
+	border: 2px solid #0E1271;
+	box-shadow: 5px 5px 25px #091450;
+	height: 480px;
+	width: 400px;
+}
+
+.title_SignUp {
+	color: white;
+	padding-bottom: 5px;
+	margin: 14px 0px 15px 20px;
+	width: 66px;
+	border-bottom: 2px solid #0A1F50;
+	font-size: 1.1em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.campo_Register {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 0px 20px;
+}
+
+.title_Register {
+	color: white;
+	margin: 15px 0px 10px 0px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.input_Register {
+	background-color: rgb(0 0 0 / 10%);
+	border: none;
+	border-bottom: 3px solid #141A99;
+	border-radius: 8px;
+	color: white;
+	outline: none;
+	padding: 0px 10px 0px 10px;
+	width: 340px;
+	height: 32px;
+}
+
+.input_Register:focus {
+	border-bottom: 3px solid #114EE5;
+}
+
+.box_NoRobot {
+	display: flex;
+	align-items: center;
+	margin-top: 13px;
+	margin-left: 5px;
+}
+
+.block_checkbox {
+	border: 1px solid white;
+	border-radius: 8px;	
+	height: 23px;
+	width: 23px;
+    padding: 1px 1px 1px 1px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.block_checkbox:hover {
+    border-style: dotted;
+}
+
+.block_checkbox__Checked {
+    background: url(../../assets/icons/done_black_24dp.svg) no-repeat center #7E74EF;
+    background-size: 20px;
+    border: 1px solid #7E74EF;
+}
+
+.NoRobot_title {
+	color: white;
+    transform: scale(0.9);
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.SignUp {
+	margin-top: 20px;
+	border: none;
+	color: white;
+	font-weight: bold;
+	background-color: #333DD8;
+	width: 180px;
+	height: 40px;
+	outline: none;
+	border-radius: 13px;
+	transition: 700ms;
+}
+
+.SignUp:hover {
+cursor: pointer;
+	background-color: #1C2390;
+}
+
+.protectClick {
+	position: absolute;
+	min-width: 280px;
+	min-height: 70px;
+	top: 88%;
+}

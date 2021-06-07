@@ -1,5 +1,5 @@
 .container_menu {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	margin-left: 7%;
     font-family: 'Abel', sans-serif;

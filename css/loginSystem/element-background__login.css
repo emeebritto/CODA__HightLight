@@ -1,0 +1,55 @@
+.top_logo__img__screenTwo {
+	position: absolute;
+	width: 140px;
+	left: 88%;
+}
+
+.codeLayer {
+	background-color:;
+	width: 100%;
+	height: 100%;
+	transform: rotate(25deg);
+}
+
+.allCodesLayer {
+	position: absolute;
+	width: 52%;
+}
+
+#layer_1 {
+	top: 40%;
+	left: 20%;
+	transform: skewX(-35deg);
+}
+
+#layer_2 {
+	top: 30%;
+	left: 16%;
+	transform: skewX(-35deg);
+	box-shadow: 5px 5px 20px rgb(0 0 0 / 53%), inset 5px 5px 15px rgb(0 0 0 / 39%);
+}
+
+#layer_3 {
+	top: 20%;
+	left: 13%;
+	transform: skewX(-35deg);
+	box-shadow: 5px 5px 20px rgb(0 0 0 / 53%), inset 5px 5px 25px rgb(0 0 0 / 39%);	
+	animation: 5s cards_upDown  infinite alternate;
+}
+
+@keyframes cards_upDown {
+	from {
+		top: 15%;
+		left: 12%;
+	}
+}
+
+#layer_2:hover {
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px rgb(0 255 128 / 33%), inset 5px 5px 20px rgb(0 255 128 / 9%);
+}
+
+#layer_3:hover {
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px rgb(0 255 128 / 33%), inset 5px 5px 20px rgb(0 255 128 / 9%);	
+}

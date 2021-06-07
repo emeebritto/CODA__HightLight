@@ -1,14 +1,11 @@
-var hearder = document.querySelector(".inSroll");
 var arrowUp = document.querySelector(".circle_arrowUp");
 
 document.addEventListener("scroll", function(){
     var scroll = window.scrollY;
     if (scroll > 164){
-        hearder.style.display="";
         arrowUp.style.display="";
     }
     if (scroll < 164){
-        hearder.style.display="none";
         arrowUp.style.display="none"
     }
 })

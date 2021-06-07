@@ -1,20 +1,20 @@
 var blockCheck = document.querySelector(".block_checkbox");
-blockCheck.value = "0";
-check = 2;
+blockCheck.value = false;
+checkRobot = true;
 
 blockCheck.addEventListener("click", function(){
-    if (check == 1){
+    if (checkRobot == false){
         blockCheck.classList.remove('block_checkbox__Checked')
-        blockCheck.value = "0";
+        blockCheck.value = false;
         console.log(blockCheck.value);
-        check = 2;
+        checkRobot = true;
         return
     }
-    if (check == 2){
+    if (checkRobot == true){
         blockCheck.classList.add('block_checkbox__Checked')
-        blockCheck.value = "1";
+        blockCheck.value = true;
         console.log(blockCheck.value);
-        check = 1;
+        checkRobot = false;
         return
     }
 })

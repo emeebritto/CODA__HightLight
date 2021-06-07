@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/menu_nav.css">
+		<link rel="stylesheet" href="css/nav_float.css">
 		<link rel="stylesheet" href="css/darcula.css">		
 		<link rel="stylesheet" href="css/codeEditor/gridSystem__codeEditor.css">
 		<link rel="stylesheet" href="css/codeEditor/preview.css">
@@ -31,56 +32,15 @@
 			</a>
 			<input class="top__search" type="search" name="search" placeholder="Search">
 
-			<section class="campo__perfil">
-				<img class="campo__perfil__img" src="assets/img/img-perfil.png">
-				<p class="campo__perfil__name">Emerson_Britto</p>
+			<section class="infoField">
+				<img id="infoField__icon_notification" src="assets/icons/notifications_white_24dp.svg">
+				<img id="infoField__icon_info" src="assets/icons/info_white_24dp.svg">
 			</section>
 		</header>
 
-<!------------------------------------------------------ menu de navegação (lateral) -->
+<!------------------------------------------------------ campo do code -->
 
 		<section class="container">
-			<nav class="container_menu">
-				<h1 class="title_nav">MENU</h1>
-
-				<a href="index.html">
-					<section class="buttons_nav">
-						<div class="block_icon__active">
-							<img class="block_icon_iconPosition" src="assets/icons/code_white_24dp.svg" type="svg">
-						</div>
-						<p class="name_codeEditor">Code Editor</p>
-					</section>					
-				</a>
-
-				<a href="myPosts.html">
-					<section class="buttons_nav">
-						<div class="block_icon">
-							<img class="block_icon_iconPosition" src="assets/icons/library_books_white_24dp.svg" type="svg">
-						</div>
-						<p class="name_community">My HighLight</p>
-					</section>
-			    </a>
-
-				<a href="bookmarks.html">
-					<section class="buttons_nav">
-						<div class="block_icon">
-							<img class="block_icon_iconPosition" src="assets/icons/bookmarks_white_24dp.svg" type="svg">
-						</div>
-						<p class="name_community">Bookmarks</p>
-					</section>
-			    </a>
-
-				<a href="community.html">
-					<section class="buttons_nav">
-						<div class="block_icon">
-							<img class="block_icon_iconPosition" src="assets/icons/forum_white_24dp.svg" type="svg">
-						</div>
-						<p class="name_community">Community</p>
-					</section>
-			    </a>
-			</nav>
-
-<!------------------------------------------------------ campo do code -->
 
 			<main class="codePreview">
 				<section class="painel__border" onmouseleave="highlightActive()" id="code">
@@ -149,6 +109,77 @@
 
 			</section>
 
+<!------------------------------------------------------ menu de navegação (float) -->
+
+			<nav class="nav_float">
+
+				<a id="nav_link__search" href="myPosts.html">
+					<section class="nav_buttons">
+						<div class="block_icon">
+							<img class="block_icon_iconPosition" src="assets/icons/search_white_24dp.svg" type="svg">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_search" class="nav_titleSection">Search</p>
+						</div>
+					</section>
+			    </a>
+
+				<a id="nav_link__account" href="index.html">
+					<section class="nav_buttons">
+						<div class="block_imgUser">
+							<img class="imgUser" src="assets/img/img-perfil.png">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_account" class="nav_titleSection">Account</p>
+						</div>
+					</section>					
+				</a>
+
+				<a id="nav_link__codeEitor" href="index.html">
+					<section class="nav_buttons">
+						<div id="block_icon__codeEditor" class="block_icon__active">
+							<img class="block_icon_iconPosition" src="assets/icons/code_white_24dp.svg" type="svg">
+						</div>
+						<div id="box_titleSection_CodeEditor" class="box_titleSection">
+						    <p class="nav_titleSection">Code Editor</p>							
+						</div>
+
+					</section>					
+				</a>
+
+				<a id="nav_link__myPost" href="myPosts.html">
+					<section class="nav_buttons">
+						<div class="block_icon">
+							<img class="block_icon_iconPosition" src="assets/icons/library_books_white_24dp.svg" type="svg">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_MyPost" class="nav_titleSection">My Posts</p>
+						</div>
+					</section>
+			    </a>
+
+				<a id="nav_link__bookmarks" href="bookmarks.html">
+					<section class="nav_buttons">
+						<div class="block_icon">
+							<img class="block_icon_iconPosition" src="assets/icons/bookmarks_white_24dp.svg" type="svg">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_bookmarks" class="nav_titleSection">Bookmarks</p>
+						</div>
+					</section>
+			    </a>
+
+				<a id="nav_link__community" href="community.html">
+					<section class="nav_buttons">
+						<div class="block_icon">
+							<img class="block_icon_iconPosition" src="assets/icons/forum_white_24dp.svg" type="svg">
+						</div>
+						<div class="box_titleSection">
+						    <p id="box_titleSection_community" class="nav_titleSection">Community</p>
+						</div>
+					</section>
+			    </a>
+			</nav>
 		</section>
 
 <!------------------------------------------------------ hearder flutuante -->
@@ -168,7 +199,6 @@
         <script src="js/highlight.js"></script>
         <script src="js/RGBmode.js"></script>
         <script src="js/command__shortcut.js"></script>
-        <script src="js/imgData.js"></script>
         <script src="js/codeEditor/setProject.js"></script>
         <script src="js/codeEditor/privacyMode.js"></script>
 		<script src="js/codeEditor/index.js"></script>

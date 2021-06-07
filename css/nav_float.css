@@ -1,0 +1,136 @@
+.nav_float {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 70px;
+	height: 440px;
+	left: 2%;
+	border: 1px solid #051261;
+	box-shadow: 5px 5px 20px rgb(3 11 64 / 87%);
+	border-radius: 18px;
+    font-family: 'Abel', sans-serif;
+    background-color: #010524;
+}
+
+.nav_buttons {
+	position: relative;
+	width: 47px;
+	transition: 500ms;
+}
+
+.box_titleSection {
+	position: absolute;
+	text-align: center;
+	background-color: #060B2E;
+	border-radius: 7px;
+	padding: 2px;
+	top: 29%;
+	left: 140%;
+}
+
+.nav_titleSection {
+	color: white;
+	font-size: 1.1em;
+}
+
+.block_imgUser {
+	width: 47px;
+	height: 47px;
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.imgUser {
+	width: 48px;
+}
+
+.block_icon__active {
+	background-color: #5081FB;
+	width: 47px;
+	height: 47px;
+	border-radius: 14px;
+}
+
+.block_icon {
+	background-color: #0e2c78;
+	width: 47px;
+	height: 47px;
+	border-radius: 14px;
+	opacity: 50%;
+}
+
+.block_icon_iconPosition {
+	position: relative;
+	top: 25%;
+	left: 25%;
+}
+
+.block_icon_img_community {
+	position: relative;
+	top: 25%;
+	left: 25%;
+}
+
+#nav_link {
+	text-decoration: none;
+	max-width: 47px;
+	max-height: 47px;
+}
+
+/*-------------------------------------------------------------------*/
+
+#box_titleSection_search{
+	display: none;
+}
+
+#nav_link__search:hover #box_titleSection_search{
+	display: inline-block;
+	width: 85px;
+}
+
+#box_titleSection_account{
+	display: none;
+}
+
+#nav_link__account:hover #box_titleSection_account{
+	display: inline-block;
+	width: 85px;
+}
+
+#box_titleSection_CodeEditor{
+	display: none;
+}
+
+#nav_link__codeEitor:hover #box_titleSection_CodeEditor{
+	display: inline-block;
+	width: 85px;
+}
+
+#box_titleSection_MyPost{
+	display: none;
+}
+
+#nav_link__myPost:hover #box_titleSection_MyPost{
+	display: inline-block;
+	width: 85px;
+}
+
+#box_titleSection_bookmarks{
+	display: none;
+}
+
+#nav_link__bookmarks:hover #box_titleSection_bookmarks{
+	display: inline-block;
+	width: 85px;
+}
+
+#box_titleSection_community{
+	display: none;
+}
+
+#nav_link__community:hover #box_titleSection_community{
+	display: inline-block;
+	width: 85px;
+}

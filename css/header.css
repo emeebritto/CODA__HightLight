@@ -15,7 +15,6 @@ html {
 
 .top__pag {
 	display: flex;
-/*	background-color: #07061b;*/
 	justify-content: space-between;
 	height: 4rem;
   width: auto;
@@ -35,6 +34,7 @@ html {
 }
 
 .top__search {
+	display: none;
 	width: 49.6%;
 	background: rgba(255, 255, 255, 5%);
 	border-radius: 6px;
@@ -99,24 +99,20 @@ input[type="search"].dark::-webkit-search-cancel-button {
 
 /*--------------------------------------------------------------------*/
 
-.campo__perfil {
+.infoField {
 	display: flex;
 	align-items: center;
 	margin-right: 2.2%;
 }
 
-.campo__perfil:hover {
+#infoField__icon_notification {
+	margin-right: 20px;
+}
+
+#infoField__icon_notification:hover {
 	cursor: pointer;
 }
 
-.campo__perfil__img {
-	width: 30px;
-	border-radius: 20px;
-}
-
-.campo__perfil__name {
-	margin-left: 0.6em;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 13px;
+#infoField__icon_info:hover{
+	cursor: pointer;
 }

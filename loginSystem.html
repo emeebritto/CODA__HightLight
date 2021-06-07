@@ -6,50 +6,104 @@
 
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/loginSystem/background.css">
-		<link rel="stylesheet" type="text/css" href="css/loginSystem/element-background.css">
+		<link rel="stylesheet" href="css/loginSystem/element-background.css">
+		<link rel="stylesheet" href="css/loginSystem/box-register.css">
 		<link rel="stylesheet" href="css/loginSystem/box-login.css">
+		<link rel="stylesheet" href="css/loginSystem/element-background__login.css">
 	</head>
-	<body>
+	<body class="body">
 		<section class="container_background">
+			<section class="elements_background">
+				<p id="letter_C" class="letters">C</p>
+				<p id="letter_O" class="letters">O</p>
+				<p id="letter_D" class="letters">D</p>
+				<p id="letter_A" class="letters">A</p>
+
+				<img id="icon_moon" class="icons_background" src="assets/icons/nightlight_round_black_24dp.svg">
+				<img id="icon_arrowLeft" class="icons_background" src="assets/icons/arrow_back_ios_new_black_24dp.svg">
+                <img id="icon_arrowRight" class="icons_background" src="assets/icons/arrow_forward_ios_black_24dp.svg">
+
+                <img id="icon_X" class="icons_background" src="assets/icons/add_black_24dp.svg">
+                <img id="icon_XTwo" class="icons_background" src="assets/icons/add_black_24dp.svg">
+			</section>
 			
 			<img class="top_logo__img" src="assets/img/logo_coda.png">
 
 			<section class="box__titleSlogan">
 
-				<h1 class="titleSlogan">Style is Life_</h1>
+				<h1 class="titleSlogan">Style is Life<cursor id="cursor">_</cursor></h1>
 				<h2 class="subTitleSlogan"><strong id="show">Show</strong> your code in <strong id="coda">CODA</strong> style</h2>
 			</section>
-			<section class="box__Login">
+			<section class="box__Register">
 				<section class="box__linkToRegister">
 					<p class="title_linkToRegister">Login</p>
 					<img class="icon_linkToRegister" src="assets/icons/arrow_forward_ios_white_24dp.svg">
 				</section>
-				<section class="box__campo_login">
-					<p class="title_register">Sign Up</p>
-				    <form class="campo_login">
-						<label for="nameUserLogin" class="title_Login">Username</label>
-						<input type="text" id="nameUserLogin" class="input_Login" required placeholder="Emerson_Britto">
+				<section class="box__campo_Register">
+					<p class="title_SignUp">Sign Up</p>
+				    <form class="campo_Register">
+						<label for="nameUserRegister" class="title_Register">Username</label>
+						<input type="text" id="nameUserRegister" class="input_Register" required placeholder="Ex: Emerson_Britto" minlength="5" maxlength="16">
 
-						<label for="emailLogin" class="title_Login">Email</label>
-						<input type="email" id="emailLogin" class="input_Login" required placeholder="seuemail@dominio.com">
+						<label for="emailRegister" class="title_Register">Email</label>
+						<input type="email" id="emailRegister" class="input_Register" required placeholder="yourmail@domain.com" minlength="13" maxlength="32">
 
-					    <label for="passwordLogin" class="title_Login">Password</label>
-		                <input type="password" id="passwordLogin" class="input_Login" required>
+					    <label for="passwordRegister" class="title_Register">Password</label>
+		                <input type="password" id="passwordRegister" class="input_Register" minlength="8" maxlength="30" required>
 
-					    <label for="passwordLogin" class="title_Login">retype your password</label>
-		                <input type="password" id="passwordLogin" class="input_Login">
+					    <label for="rePasswordRegister" class="title_Register">retype your password</label>
+		                <input type="password" id="rePasswordRegister" class="input_Register">
 
 						<section class="box_NoRobot">
-							<div class="block_checkbox"></div>
+							<div id="checkRobot" class="block_checkbox"></div>
 							<p class="NoRobot_title">I'm not a robot</p>
 						</section>
 
-						<input type="submit" value="Sign Up" class="SignUp">
+						<input type="submit" value="Sign Up" class="SignUp" style="background-color: #0F146D; color: #979797;" onclick="getData()">
+						<div class="protectClick"></div>
 				    </form>
 				</section>
 			</section>
 		</section>
 
+<!-- ------------------------------------------------------------------------ -->
+
+		<section class="container_background__screenTwo">
+            <section class="container__codeLayers">
+				<section class="codeLayer">
+					<img id="layer_1" class="allCodesLayer" src="assets/img/layer1.png">
+					<img id="layer_2" class="allCodesLayer" src="assets/img/layer2.png">		
+					<img id="layer_3" class="allCodesLayer" src="assets/img/layer3.png">				
+				</section>
+			</section>
+
+			<img class="top_logo__img__screenTwo" src="assets/img/logo_coda.png">
+
+			<section class="box__Login">
+				<section class="box__linkToLogin">
+					<img class="icon_linkToLogin" src="assets/icons/arrow_forward_ios_white_24dp.svg">
+					<p class="title_linkToLogin">Register</p>
+				</section>
+				<section class="box__campo_Login">
+					<p class="title_SignIn">Sign In</p>
+				    <form class="campo_Login">
+
+						<label for="emailLogin" class="title_Login">Email</label>
+						<input type="email" id="emailLogin" class="input_Login" required placeholder="Your Email" minlength="13" maxlength="32">
+
+					    <label for="passwordLogin" class="title_Login">Password</label>
+		                <input type="password" id="passwordLogin" class="input_Login" required placeholder="Your Password" minlength="8" maxlength="30">
+
+						<input type="submit" value="Sign in" class="btn_SignIn">
+				    </form>
+				</section>
+			</section>
+		</section>
+        
+        <script src="js/loginSystem/Cursor_Blinking.js"></script>
 		<script src="js/loginSystem/NoRobot.js"></script>
+		<script src="js/loginSystem/formControl.js"></script>
+		<script src="js/loginSystem/registerSystem.js"></script>
+		<script src="js/loginSystem/SlideSystem.js"></script>
 	</body>
 </html>
