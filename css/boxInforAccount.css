@@ -1,0 +1,45 @@
+.box_inforAccount {
+	position: absolute;
+	top: -30%;
+	left: 150%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 40vh;
+	width: 15vw;
+	background-color: rgb(0 0 0 / 60%);
+	border-radius: 13px;
+	border: 2px solid #1D3386;
+	box-shadow: 5px 5px 30px rgb(0 0 0 / 90%), inset 0px 0px 20px #09184D;
+}
+
+.box_inforAccount_imgAccount {
+	border-radius: 53px;
+	width: 120px;
+}
+
+.box_inforAccount_nameUser {
+	color: white;
+	font-size: 1.2em;
+}
+
+.box_inforAccount_idUser {
+	color: gray;
+}
+
+.box_inforAccount_logOut {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	width: 130px;
+	height: 35px;
+	color: white;
+	background-color: #1D3386;
+	transition: 700ms;
+}
+
+.box_inforAccount_logOut:hover {
+	cursor: pointer;
+	background-color: #0B1B54;
+}

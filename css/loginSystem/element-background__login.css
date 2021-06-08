@@ -4,6 +4,10 @@
 	left: 88%;
 }
 
+.top_logo__img__screenTwo:hover {
+    cursor: pointer;
+}
+
 .codeLayer {
 	background-color:;
 	width: 100%;

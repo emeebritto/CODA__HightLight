@@ -27,7 +27,7 @@
                 <img id="icon_XTwo" class="icons_background" src="assets/icons/add_black_24dp.svg">
 			</section>
 			
-			<img class="top_logo__img" src="assets/img/logo_coda.png">
+			<img class="top_logo__img" onclick="redirectMain()" src="assets/img/logo_coda.png">
 
 			<section class="box__titleSlogan">
 
@@ -83,7 +83,7 @@
 				</section>
 			</section>
 
-			<img class="top_logo__img__screenTwo" src="assets/img/logo_coda.png">
+			<img class="top_logo__img__screenTwo" onclick="redirectMain()" src="assets/img/logo_coda.png">
 
 			<section class="box__Login">
 				<section class="box__linkToLogin">
@@ -100,16 +100,22 @@
 					    <label for="passwordLogin" class="title_Login">Password</label>
 		                <input type="password" id="passwordLogin" class="input_Login" required placeholder="Your Password" minlength="8" maxlength="30">
 		                
-						<input type="submit" value="Sign in" class="btn_SignIn">
+						<input type="button" value="Sign in" class="btn_SignIn">
 				    </form>
 				</section>
+				<span class="box__alert_AccountInvalid" style="display: none;">
+					<img class="img_accountInvalid" src="assets/icons/warning_amber_white_24dp.svg">
+					<p class="txt_accountInvalid">The email or password is not valid</p>
+				</span>
 			</section>
+
 		</section>
         
         <script src="js/loginSystem/Cursor_Blinking.js"></script>
+		<script src="js/loginSystem/registerSystem.js"></script>
 		<script src="js/loginSystem/NoRobot.js"></script>
 		<script src="js/loginSystem/formControl.js"></script>
-		<script src="js/loginSystem/registerSystem.js"></script>
 		<script src="js/loginSystem/SlideSystem.js"></script>
+		<script src="js/loginSystem/acessSystem.js"></script>
 	</body>
 </html>

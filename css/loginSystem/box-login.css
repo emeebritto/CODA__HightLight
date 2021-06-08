@@ -96,3 +96,22 @@
     cursor: pointer;
 	background-color: #1C2390;
 }
+
+.box__alert_AccountInvalid {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 14px;
+    top: 66%;
+    left: 17%;
+    width: 22vw;
+    height: 7vh;
+    background-color: #C30000;
+    box-shadow: 5px 5px 30px rgb(0 0 0 / 80%);
+    transition: 700ms;
+}
+
+.txt_accountInvalid {
+	color: white;
+}

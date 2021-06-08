@@ -8,6 +8,15 @@ new function () {
 
 function showProject() {
 
+	if (localStorage.getItem("loginActive000") == null){
+		document.querySelector(".box__nologged_myPost").style.display="";
+		return
+	}
+
+    document.querySelector(".highLightbyNameUser").textContent = `Posted by "${accountActive.dataUser.nameUser}"`;
+
+	userLoged = accountActive.dataUser.nameUser;
+
 	var verificationUser = localStorage.getItem(`by ${userLoged} ` + 0);
 
 	if (verificationUser != null){

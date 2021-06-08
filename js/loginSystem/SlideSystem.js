@@ -20,3 +20,12 @@ if (sessionStorage.getItem("redirectLogin") != null){
     window.scrollTo({ left: 1500, top: 0, behavior: "smooth" });
     setTimeout(function(){document.querySelector(".container_background").style.display="none";}, 500);
 }
+
+
+
+/*------------------------------------PLUS--------------------------------------*/
+
+
+function redirectMain(){
+    window.location.replace("index.html");
+}

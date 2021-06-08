@@ -11,6 +11,14 @@ var imgUser = nameUser;
 /*----------------------------------------------------------------------------------------*/
 
 save__btn.addEventListener("click", function(){
+    if(localStorage.getItem("loginActive000") == null){
+        document.getElementById("box_alert__NoLogged").style.display="";
+        document.querySelector(".nav_float").style.display="none";
+        return
+    }
+
+    nameUser = accountActive.dataUser.nameUser;
+    imgUser = accountActive.dataUser.imgUser;
 
     save__btn.classList.add("loading-upload");
     setTimeout(function(){save__btn.classList.remove("loading-upload")}, 5000);
@@ -50,7 +58,7 @@ save__btn.addEventListener("click", function(){
 
 function createProject() {
     var daten = Date.now();
-    let project = {'onCoda': applyCodaId(), 'onPrivacy': applyId(), 'detalhesDoproject': {'projectName': projectName.value, 'projectDescription': projectDescription.value, 'selectedLanguagem': languagem.value, 'code': codeField.querySelector('code').innerText, 'selectedColor': RGBResult, 'RGBmode': rgb__btn.value, 'privacyMode': blockCheck.value, 'timepost': daten, 'orderList': applyOrder(), 'user': {'nameUser': nameUser, 'imgUser': `assets/imgUsers/${imgUser}.png`}}
+    let project = {'onCoda': applyCodaId(), 'onPrivacy': applyId(), 'detalhesDoproject': {'projectName': projectName.value, 'projectDescription': projectDescription.value, 'selectedLanguagem': languagem.value, 'code': codeField.querySelector('code').innerText, 'selectedColor': RGBResult, 'RGBmode': rgb__btn.value, 'privacyMode': blockCheck.value, 'timepost': daten, 'orderList': applyOrder(), 'user': {'nameUser': nameUser, 'imgUser': imgUser}}
     }
     return project;
 }

@@ -7,6 +7,10 @@
 	left: 1%;
 }
 
+.top_logo__img:hover {
+    cursor: pointer;
+}
+
 .box__titleSlogan {
 	position: relative;
 	top: 65%;
