@@ -1,6 +1,7 @@
 var myPosts = document.querySelector(".myPosts");
 var boxNoContentMyPost = document.querySelector(".box__noContent_myPost");
 var userLoged = "Emerson_Britto";
+let projectWithRGB = [];
 
 new function () {
     showProject()
@@ -22,6 +23,7 @@ function showProject() {
 	if (verificationUser != null){
 
 	    let projectUser = []
+	    projectWithRGB = [];
 	    for(let i = 0; i < localStorage.length; i++) {
 	        if (localStorage.getItem(`by ${userLoged} ` + i) != null){
 	            projectUser.push(JSON.parse(localStorage.getItem(`by ${userLoged} ` + i)))	    		
@@ -32,6 +34,11 @@ function showProject() {
 	        const card = createCard(project)
         	myPosts.innerHTML += card
             const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`)
+
+	        if (project.detalhesDoproject.RGBmode == "on"){
+	        	projectWithRGB.push(project.onPrivacy);
+	        }
+
 	        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
 	        addHighLight(project);
    		
@@ -43,11 +50,26 @@ function showProject() {
 				codePreview.classList.add("painel_code__codePreview__NoFeed");
 			}
 	    })
+	    applyRGB();
 	}
 
 	if (verificationUser == null){
 	    boxNoContentMyPost.style.display="inline-block";
 	}
+}
+
+function applyRGB(){
+	setInterval(function(){
+		for(var i = 0; i < projectWithRGB.length; i++){
+        	postCaptured = myPosts.querySelector(`[data-id="${projectWithRGB[i]}"]`);
+        	postborderColor = postCaptured.querySelector(".painel_border__CodePost");
+		    rr = Math.floor(Math.random() * 161);
+		    gg = Math.floor(Math.random() * 161);
+		    bb = Math.floor(Math.random() * 161);
+		    formatacaoRGB = 'rgb('+ rr + "," + gg + "," + bb +')' ;
+		    postborderColor.style.borderColor = formatacaoRGB;
+		}
+	},2000)
 }
 
 function createCard(project) {

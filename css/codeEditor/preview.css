@@ -28,6 +28,7 @@
     border-radius: 9px;
     width: 90%;
     min-height: 22.0em;
+    margin-bottom: 36px;
     transition: 900ms;
     animation: 1s start_code forwards;
 }

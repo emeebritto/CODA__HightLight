@@ -52,7 +52,7 @@
 
 			<nav class="nav_float">
 
-				<a id="nav_link__search" href="myPosts.html">
+				<section id="nav_link__search">
 					<section class="nav_buttons">
 						<div class="block_icon">
 							<img class="block_icon_iconPosition" src="assets/icons/search_white_24dp.svg" type="svg">
@@ -60,8 +60,12 @@
 						<div class="box_titleSection">
 						    <p id="box_titleSection_search" class="nav_titleSection">Search</p>
 						</div>
+						<div class="box__search" style="display: none;">
+							<input class="input_search" type="text" name="Search" placeholder="Search">
+							<img class="img_search" src="assets/icons/search_white_24dp.svg">
+						</div>
 					</section>
-			    </a>
+			    </section>
 
 				<section id="nav_link__account" style="display: none;">
 					<section class="nav_buttons">
@@ -146,6 +150,7 @@
 
         <script src="js/loginChecker.js"></script>
         <script src="js/command__shortcut.js"></script>
+	    <script src="js/openSearch.js"></script>
 	    <script src="js/redirectSign.js"></script>
 	    <script src="js/boxInforAccount.js"></script>
 	</body>

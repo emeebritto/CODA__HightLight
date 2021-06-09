@@ -1,6 +1,7 @@
 var communityPag = document.querySelector(".communityPag");
 var boxNoContent = document.querySelector(".box__noContent");
 let projectWithoutPrivacy = [];
+let projectWithRGB = [];
 var cnpc = 1;
 
 new function () {
@@ -13,8 +14,9 @@ function showProject() {
 
 	if (verification != null){
 
-	    let projectCommunity = []
+	    let projectCommunity = [];
 	    projectWithoutPrivacy = [];
+	    projectWithRGB = [];
 	    for(let i = 0; i < localStorage.length; i++) {
 	    	if (localStorage.getItem("onCoda " + i) != null){
 	            projectCommunity.push(JSON.parse(localStorage.getItem("onCoda " + i)))	    		
@@ -25,16 +27,36 @@ function showProject() {
 	        const card = createCard(project)
         	communityPag.innerHTML += card
 	        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCoda}"]`)
+
+	        if (project.detalhesDoproject.RGBmode == "on"){
+	        	projectWithRGB.push(project.onCoda);
+	        }
+
 	        projectWithoutPrivacy.push(communityPag.querySelector(`[data-id="${project.onCoda}"]`))
 	        codigoHtml.querySelector('code').innerText = project.detalhesDoproject.code
 	        addHighLight(project);
 	    })
+	    applyRGB();
 
 	}
 
 	if (verification == null){
 	    boxNoContent.style.display="inline-block";
 	}
+}
+
+function applyRGB(){
+	setInterval(function(){
+		for(var i = 0; i < projectWithRGB.length; i++){
+        	postCaptured = communityPag.querySelector(`[data-id="${projectWithRGB[i]}"]`);
+        	postborderColor = postCaptured.querySelector(".painel_border__CodePost");
+		    rr = Math.floor(Math.random() * 161);
+		    gg = Math.floor(Math.random() * 161);
+		    bb = Math.floor(Math.random() * 161);
+		    formatacaoRGB = 'rgb('+ rr + "," + gg + "," + bb +')' ;
+		    postborderColor.style.borderColor = formatacaoRGB;
+		}
+	},2000)
 }
 
 function createCard(project) {
@@ -82,7 +104,7 @@ function createCard(project) {
 							</section>
 						</div>
 						<div class="field_code">
-						    <code class="campo__code hljs ${project.detalhesDoproject.selectedLanguagem}"></code>									
+						    <code onclick="fullView()" class="campo__code hljs ${project.detalhesDoproject.selectedLanguagem}"></code>		
 						</div>
 					</div>
 				</section>

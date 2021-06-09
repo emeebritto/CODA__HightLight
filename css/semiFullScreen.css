@@ -14,31 +14,31 @@
     margin-left: 26px;
 }
 
-.painel__border {
-	position: relative;
-	background-color: #5a3aa1;
-	width: 70%;
-	left: 15%;
+#icon_closeFullView {
+	position: absolute;
+	top: 0.5%;
+	left: 0.5%;
+	width: 60px;
+}
+
+#icon_closeFullView:hover {
+	cursor: pointer;
+}
+
+.painel__code {
+	position: absolute;
+    background-color: #000E1E;
+    box-shadow: 5px 5px 30px black;
+	width: 65%;
+	top: 8%;
+	left: 5%;
 	border-radius: 9px;
 	min-height: 33.5em;
 	margin-bottom: 30px;
 	transition: 2s;
 }
 
-.painel__code {
-    position: relative;
-    left: 5%;
-    top: 1em;
-    background-color: #000E1E;
-    box-shadow: 5px 5px 30px black;
-    padding-bottom: 7px;
-    border-radius: 9px;
-    width: 90%;
-    min-height: 31em;
-    transition: 900ms;
-}
-
-.box__buttons__decoration {
+.box__buttons__decoration_fullView {
 	display: flex;
 	align-items: center;
     margin: 1% 0 1.9% 0%;
@@ -47,11 +47,12 @@
 	height: 11%;
 }
 
-.buttons__decoration {
+.buttons__decoration_fullview {
 	border-radius: 100%;
-	margin-top: 2%;
-	width: 12px;
-	height: 13px;
+	margin-top: 1%;
+	margin-left: 2%;
+	width: 17px;
+	height: 18px;
 }
 
 .button__decoration__red {
@@ -77,4 +78,121 @@
 	height: 80%;
 	font-size: 1.1em;
 	margin-top: 6px;
+}
+
+/*------------------------------------------------------------------*/
+
+.box__info_feed {
+	background-color: #2C3E50;
+	overflow: hidden;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	height: 95vh;
+	width: 354px;
+	top: 2%;
+	left: 73%;
+	border-radius: 10px;
+}
+
+/*-------------------------------------------------------*/
+
+.inforUser {
+	display: flex;
+	align-items: center;
+	background-color: #212F3D;
+	height: 60px;
+}
+
+#inforUser__img {
+	border-radius: 12px;
+	margin-left: 10px;
+	margin-right: 14px;
+	width: 44px;
+	height: 44px;
+}
+
+.box__name_time {
+	display: flex;
+	flex-direction: column;
+}
+
+#inforUser__name{
+	color: white;
+	margin-bottom: 5px;
+}
+
+#inforUser__time{
+	font-size: 0.8em;
+	color: gray;
+}
+
+/*----------------------------------------------------------*/
+
+.commit {
+	background-color: #273746;
+	height: 140px;
+	color: white;
+    padding: 10px 10px 6px 10px;
+}
+
+/*-----------------------------------------------------------*/
+
+.dateFeedbacks {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	background-color: #273746;
+}
+
+.dateFeedbacks__icons {
+	margin-left: 15px;
+}
+
+.dateFeedbacks__icons:hover {
+	cursor: pointer;
+}
+
+.dateFeedbacks_nums {
+	color: white;
+	margin-left: 8px;
+}
+
+#dateFeedbacks_iconBookmark {
+	margin-left: 54%;
+}
+
+/*--------------------------------------------------------------*/
+
+.section__allCommits {
+	display: flex;
+	flex-direction: column;
+	background-color: #566573;
+	height: 350px;
+}
+
+/*---------------------------------------------------------*/
+
+.section__sendCommit {
+	display: flex;
+	align-items: center;
+	height: 46px;
+	margin: 5px;
+}
+
+#imgUser_sendCommit {
+	border-radius: 16px;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+
+#input_sendCommit {
+	border: none;
+	outline: none;
+	height: 30px;
+	width: 73%;
+	background-color: #566573;
+	border-radius: 10px;
+	margin-right: 8px;
 }
