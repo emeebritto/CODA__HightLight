@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Odibee+Sans&display=swap');
 
+body {
+	min-height: 664px;
+}
+
 .myPosts {
 	display: flex;
 	flex-wrap: wrap;
@@ -39,4 +43,8 @@
 	display: inline-block;
 /*	left: 272px;*/
 	transform: scale(1.2);
+}
+
+.icon_bin:hover{
+	cursor: pointer;
 }

@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="css/myPosts/myHighLightPag.css">
 		<link rel="stylesheet" href="css/darcula.css">
         <link rel="stylesheet" href="css/myPosts/responsive__myPostPag.css">
+		<link rel="stylesheet" href="css/semiFullScreen.css">
 		<link rel="stylesheet" href="css/hearderFloat.css">
 		<link rel="stylesheet" href="css/arrowUp.css">
 		<link rel="icon" href="assets/icon.png">
@@ -178,9 +179,58 @@
 			</section>
 		</header> -->
 
+<!----------------------------------- visualização de postagem em modo SemiTela cheia -->
+
+		<span class="view__semiFullScreen" style="display: none;">
+
+            <img id="icon_closeFullView" onclick="closeFullView()" src="assets/icons/close_white_24dp.svg">
+
+			<div class="painel__code">
+				<div class="box__buttons__decoration_fullView">
+					<div class="button__decoration__red buttons__decoration_fullview"></div>
+					<div class="button__decoration__yellow buttons__decoration_fullview"></div>
+					<div class="button__decoration__green buttons__decoration_fullview"></div>
+				</div>
+				<div class="wrapper_code here">
+				</div>
+			</div>
+			<section class="box__info_feed">
+				<section class="section__info">
+					<section class="inforUser">
+						<img id="inforUser__img" src="assets/img/img-perfil.png">
+						<div class="box__name_time">
+							<p id="inforUser__name">Emerson_Britto</p>
+							<p id="inforUser__time">10 min Ago</p>							
+						</div>
+					</section>
+					<section class="commit">Meu code para vcs</section>
+					<section class="dateFeedbacks">
+						<img id="dateFeedbacks_iconLikes" class="dateFeedbacks__icons" src="assets/icons/icon_like.svg">
+						<p id="dateFeedbacks_numLike" class="dateFeedbacks_nums">0</p>
+						<img id="dateFeedbacks_iconCommit" class="dateFeedbacks__icons" src="assets/icons/icon_feedBack.svg">
+						<p id="dateFeedbacks_numCommit" class="dateFeedbacks_nums">0</p>
+						<img id="dateFeedbacks_iconBookmark" src="assets/icons/bookmark_border_white_24dp.svg">
+					</section>
+				</section>
+				<section class="section__commits">
+					<section class="section__allCommits"></section>
+					<section class="section__sendCommit" style="display: none;">
+						<img id="imgUser_sendCommit" onmouseenter="showNameUserLogged()" onmouseleave="hideNameUserLogged()" src="assets/img/img-perfil.png">
+						<span id="tooltip" style="display:none;"><p id="tooltip_txt">Logged - @Emerson_Britto</p></span>
+						<input id="input_sendCommit" type="text" name="commit" placeholder="Type Here..">
+						<img src="assets/icons/send_white_24dp.svg">
+					</section>
+					<p id="alertNoLogged__sendCommit" style="display:none;">You must be logged in to send commits</p>
+				</section>
+			</section>
+		</span>
+
         <script src="js/loginChecker.js"></script>
         <script src="js/highlight.js"></script>
         <script src="js/getProjectMyPost.js"></script>
+        <script src="js/feedBackCounterSystem.js"></script>
+        <script src="js/managerPostSystem.js"></script>
+        <script src="js/fullScreenSystem.js"></script>
         <script src="js/scrollSystem.js"></script>
 	    <script src="js/openSearch.js"></script>
 	    <script src="js/redirectSign.js"></script>

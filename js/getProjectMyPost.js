@@ -20,42 +20,39 @@ function showProject() {
 
 	var verificationUser = localStorage.getItem(`by ${userLoged} ` + 0);
 
-	if (verificationUser != null){
+    let projectUser = []
+    projectWithRGB = [];
+    for(let i = 0; i < localStorage.length; i++) {
+        if (localStorage.getItem(`by ${userLoged} ` + i) != null){
+            projectUser.push(JSON.parse(localStorage.getItem(`by ${userLoged} ` + i)))	    		
+    	}
+    }
 
-	    let projectUser = []
-	    projectWithRGB = [];
-	    for(let i = 0; i < localStorage.length; i++) {
-	        if (localStorage.getItem(`by ${userLoged} ` + i) != null){
-	            projectUser.push(JSON.parse(localStorage.getItem(`by ${userLoged} ` + i)))	    		
-	    	}
-	    }
+    if (projectUser.length == 0) {boxNoContentMyPost.style.display="inline-block"; return};
 
-	    projectUser.forEach(project => {
-	        const card = createCard(project)
-        	myPosts.innerHTML += card
-            const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`)
+    projectUser.forEach(project => {
+        const card = createCard(project)
+    	myPosts.innerHTML += card
+        const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`)
+        console.log(codigoHtmlMyPost)
 
-	        if (project.detalhesDoproject.RGBmode == "on"){
-	        	projectWithRGB.push(project.onPrivacy);
-	        }
+        if (project.detalhesDoproject.RGBmode == "on"){
+        	projectWithRGB.push(project.onPrivacy);
+        }
 
-	        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
-	        addHighLight(project);
-   		
-			if (project.detalhesDoproject.privacyMode == 1) {
-				boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
-				codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
-				boxFeedbacks.classList.add("field_feedbacks__Off");
-				boxFeedbacks.classList.remove("field_feedbacks");
-				codePreview.classList.add("painel_code__codePreview__NoFeed");
-			}
-	    })
-	    applyRGB();
-	}
-
-	if (verificationUser == null){
-	    boxNoContentMyPost.style.display="inline-block";
-	}
+        codigoHtmlMyPost.querySelector('code').innerText = project.detalhesDoproject.code
+        addHighLight(project);
+		
+		if (project.detalhesDoproject.privacyMode == 1) {
+			boxFeedbacks = codigoHtmlMyPost.querySelector(".field_feedbacks");
+			codePreview = codigoHtmlMyPost.querySelector(".painel_code__codePreview");
+			boxFeedbacks.classList.add("field_feedbacks__Off");
+			boxFeedbacks.classList.remove("field_feedbacks");
+			codePreview.classList.add("painel_code__codePreview__NoFeed");
+		}
+    })
+    applyRGB();
+    postLiked();
 }
 
 function applyRGB(){
@@ -72,7 +69,20 @@ function applyRGB(){
 	},2000)
 }
 
+function postLiked(){
+	if (localStorage.getItem("loginActive000") == null) {return}
+	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
+    console.log(likedBy)
+    for (var i = 0; i < likedBy.length; i++) {
+    	redirectPost = JSON.parse(localStorage.getItem(likedBy[i]));
+    	postLiked = myPosts.querySelector(`[data-id="${redirectPost.onPrivacy}"]`);
+    	postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";
+    }
+}
+
 function createCard(project) {
+
+	console.log(project.detalhesDoproject.numLikes);
 
 	if (project.detalhesDoproject.privacyMode == 0) {
 		privacyIcon = "assets/icons/public_white_24dp.svg";
@@ -91,6 +101,7 @@ function createCard(project) {
 		            <p class="contentSendFor__perfil_name">${project.detalhesDoproject.user.nameUser}</p>
 		            <p class="contentSendFor__timePost">${dateNF}</p>
 		            <section class="box_bookmark">
+		                <img onclick="delete_thisPost()" class="contentSendFor__privacyIcon icon_bin" src=assets/icons/delete_outline_white_24dp.svg>
 		                <img class="contentSendFor__privacyIcon" src=${privacyIcon}>
 		            </section>
         		</div>
@@ -107,11 +118,11 @@ function createCard(project) {
 		        		</div>
 		        		<div class="field_feedbacks__commits">
 		        			<img class="icons_feedback icon_commits" src="assets/icons/icon_feedBack.svg">
-		        			<p class="num_feedbacks num_commits">0</p>
+		        			<p class="num_feedbacks num_commits">${project.detalhesDoproject.numCommits}</p>
 		        		</div>
 		        		<div class="field_feedbacks__likes">
-		        			<img class="icons_feedback icon_likes" src="assets/icons/icon_like.svg">
-		        			<p class="num_feedbacks num_likes">0</p>
+		        			<img class="icons_feedback icon_likes" onclick="markLike()" src="assets/icons/favorite_border_white_24dp.svg">
+		        			<p class="num_feedbacks num_likes">${project.detalhesDoproject.numLikes}</p>
 		        		</div>
 		        	</div>
 					<div class="painel_code__codePreview">
@@ -124,7 +135,7 @@ function createCard(project) {
 							</section>
 						</div>
 						<div class="field_code">
-						    <code class="campo__code hljs ${project.detalhesDoproject.selectedLanguagem}"></code>									
+						    <code onclick="fullView()" class="campo__code hljs ${project.detalhesDoproject.selectedLanguagem}"></code>									
 						</div>
 					</div>
 				</section>

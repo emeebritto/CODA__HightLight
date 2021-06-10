@@ -27,6 +27,7 @@ function showProject() {
 	        const card = createCard(project)
         	communityPag.innerHTML += card
 	        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCoda}"]`)
+	        console.log(codigoHtml)
 
 	        if (project.detalhesDoproject.RGBmode == "on"){
 	        	projectWithRGB.push(project.onCoda);
@@ -37,6 +38,7 @@ function showProject() {
 	        addHighLight(project);
 	    })
 	    applyRGB();
+	    postLiked();
 
 	}
 
@@ -57,6 +59,18 @@ function applyRGB(){
 		    postborderColor.style.borderColor = formatacaoRGB;
 		}
 	},2000)
+}
+
+function postLiked(){
+	if (localStorage.getItem("loginActive000") == null) {return}
+	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
+    if (likedBy.length == 0){return}
+    for (var i = 0; i < likedBy.length; i++) {
+    	postLiked = communityPag.querySelector(`[data-id="${likedBy[i]}"]`);
+    	console.log(postLiked);
+    	postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";
+    	return
+    }
 }
 
 function createCard(project) {
@@ -87,11 +101,11 @@ function createCard(project) {
 		        		</div>
 		        		<div class="field_feedbacks__commits">
 		        			<img class="icons_feedback icon_commits" src="assets/icons/icon_feedBack.svg">
-		        			<p class="num_feedbacks num_commits">0</p>
+		        			<p class="num_feedbacks num_commits">${project.detalhesDoproject.numCommits}</p>
 		        		</div>
 		        		<div class="field_feedbacks__likes">
-		        			<img class="icons_feedback icon_likes" src="assets/icons/icon_like.svg">
-		        			<p class="num_feedbacks num_likes">0</p>
+		        			<img class="icons_feedback icon_likes" onclick="markLike()" src="assets/icons/favorite_border_white_24dp.svg">
+		        			<p class="num_feedbacks num_likes">${project.detalhesDoproject.numLikes}</p>
 		        		</div>
 		        	</div>
 					<div class="painel_code__codePreview">

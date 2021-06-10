@@ -80,35 +80,34 @@ if (vnpc == null){
 		var imgUser = nameUser[i];
 
 		var project = createProject(i);
+		updateId();
         setLocalStorage(project);
 
 		function createProject(i) {
 
-		    let project = {'onCoda': applyCodaId(), 'detalhesDoproject': {'projectName': "none", 'projectDescription': description[i], 'selectedLanguagem': codeLanguagem[i], 'code': codeUser[i], 'selectedColor': colorPostUser[i], 'RGBmode': "none", 'privacyMode': "3", 'timepost': timepostUser[i], 'orderList': applyOrder(), 'user': {'nameUser': nameUser[i], 'imgUser': `assets/imgUsers/${imgUser}.png`}}
+		    let project = {'onCoda': applyCodaId(), 'detalhesDoproject': {'projectName': "none", 'projectDescription': description[i], 'selectedLanguagem': codeLanguagem[i], 'code': codeUser[i], 'selectedColor': colorPostUser[i], 'RGBmode': "none", 'privacyMode': "3", 'timepost': timepostUser[i], 'orderList': applyOrder(), 'numLikes': 0, 'numCommits': 0, 'user': {'nameUser': nameUser[i], 'imgUser': `assets/imgUsers/${imgUser}.png`}}
 		    }
 		    return project;
 		}
 
 		function applyCodaId() {
-			for (var i = 0; i <= localStorage.length; i++) {
-				var verificaoNPC = localStorage.getItem("onCoda " + i);
-				if (verificaoNPC == null){
-				    return "onCoda " + i;
-				}
-			}
+			var id = localStorage.getItem("id");
+			return "onCoda " + id;
 		}
 
 		function applyOrder() {
-		    for (var i = 0; i <= localStorage.length; i++) {
-		        var verifyOrderNPC = localStorage.getItem("codaX " + i);
-		        if (verifyOrderNPC == null){
-		            var temp = 99999 - i;
-		            localStorage.setItem("codaX " + i, "counterCoda");
-		            return "order:" + temp;
-		        }
-		    }
+			var id = localStorage.getItem("id");
+            var temp = 99999 - id;
+            return "order:" + temp;
 		}
 
+		function updateId(){
+			var id = localStorage.getItem("id");
+			numId = parseInt(id);
+			numId = numId + 1;
+			localStorage.setItem("id", numId);
+
+		}
 
 		function setLocalStorage(objetoJson) {
 		    localStorage.setItem(objetoJson.onCoda, JSON.stringify(objetoJson));
