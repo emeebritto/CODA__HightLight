@@ -65,7 +65,6 @@ function postLiked(){
 	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
     for (var i = 0; i < likedBy.length; i++) {
     	postLiked = communityPag.querySelector(`[data-id="${likedBy[i]}"]`);
-    	console.log(postLiked);
     	if (postLiked != null){
     	    postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";    		
     	}
