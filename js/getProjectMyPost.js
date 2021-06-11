@@ -34,7 +34,6 @@ function showProject() {
         const card = createCard(project)
     	myPosts.innerHTML += card
         const codigoHtmlMyPost = myPosts.querySelector(`[data-id="${project.onPrivacy}"]`)
-        console.log(codigoHtmlMyPost)
 
         if (project.detalhesDoproject.RGBmode == "on"){
         	projectWithRGB.push(project.onPrivacy);
@@ -70,19 +69,24 @@ function applyRGB(){
 }
 
 function postLiked(){
+	console.log("111")
 	if (localStorage.getItem("loginActive000") == null) {return}
+    console.log("222")
 	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
-    console.log(likedBy)
-    for (var i = 0; i < likedBy.length; i++) {
-    	redirectPost = JSON.parse(localStorage.getItem(likedBy[i]));
+    likedBy.forEach(function(postLiked){
+    	console.log("333")
+    	redirectPost = JSON.parse(localStorage.getItem(postLiked));
+    	console.log(postLiked)
+    	console.log(redirectPost)
     	postLiked = myPosts.querySelector(`[data-id="${redirectPost.onPrivacy}"]`);
-    	postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";
-    }
+    	console.log(postLiked)
+    	if (postLiked != null){
+    	    postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";    		
+    	}
+    })
 }
 
 function createCard(project) {
-
-	console.log(project.detalhesDoproject.numLikes);
 
 	if (project.detalhesDoproject.privacyMode == 0) {
 		privacyIcon = "assets/icons/public_white_24dp.svg";
@@ -113,8 +117,8 @@ function createCard(project) {
 		        <section class="box_codePreview_FeedBacks">
 		        	<div class="field_feedbacks">
 		        		<div class="field_feedbacks__reports">
-		        			<img class="icon_report" src="assets/icons/flag_white_24dp.svg">
-		        			<p class="Text_ReportPost">Report</p>
+		        			<img class="icon_report" style="opacity:50%" src="assets/icons/flag_white_24dp.svg">
+		        			<p class="Text_ReportPost" style="opacity:50%">Report</p>
 		        		</div>
 		        		<div class="field_feedbacks__commits">
 		        			<img class="icons_feedback icon_commits" src="assets/icons/icon_feedBack.svg">

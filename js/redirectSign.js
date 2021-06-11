@@ -18,7 +18,6 @@ function redirectSignUp(){
 }
 
 document.querySelector('body').addEventListener("click", function(){
-	console.log("1");
 	if (event.target != document.getElementById("button_signIn") && event.target != document.getElementById("button_signUp") && openedBoxLogin == true && event.target != document.getElementById("nav_link__SignUpIn")){
 		console.log("2");
 		document.querySelector(".box_select_SignUp_SignIn").style.display="none";

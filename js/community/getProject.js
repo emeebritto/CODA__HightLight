@@ -27,7 +27,6 @@ function showProject() {
 	        const card = createCard(project)
         	communityPag.innerHTML += card
 	        const codigoHtml = communityPag.querySelector(`[data-id="${project.onCoda}"]`)
-	        console.log(codigoHtml)
 
 	        if (project.detalhesDoproject.RGBmode == "on"){
 	        	projectWithRGB.push(project.onCoda);
@@ -64,12 +63,12 @@ function applyRGB(){
 function postLiked(){
 	if (localStorage.getItem("loginActive000") == null) {return}
 	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
-    if (likedBy.length == 0){return}
     for (var i = 0; i < likedBy.length; i++) {
     	postLiked = communityPag.querySelector(`[data-id="${likedBy[i]}"]`);
     	console.log(postLiked);
-    	postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";
-    	return
+    	if (postLiked != null){
+    	    postLiked.querySelector(".icon_likes").src="assets/icons/icon_like.svg";    		
+    	}
     }
 }
 

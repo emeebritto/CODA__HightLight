@@ -14,9 +14,7 @@ document.querySelector(".box_inforAccount_logOut").addEventListener("click", fun
 })
 
 document.querySelector('body').addEventListener("click", function(){
-	console.log("1");
 	if (event.target != document.querySelector(".box_inforAccount_logOut") && event.target != document.querySelector(".box_inforAccount") && boxInfoAccountActive == true && event.target != document.getElementById("nav_link__account")){
-		console.log("2");
 		document.querySelector(".box_inforAccount").style.display="none";
 		boxInfoAccountActive = false;
 	}
