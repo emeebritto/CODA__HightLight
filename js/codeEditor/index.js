@@ -5,7 +5,6 @@
   
   color.addEventListener('input', function(){
 
-/*    borderColor.style.backgroundColor = this.value;*/
     borderColor.style.borderColor = this.value;
     document.documentElement.style.setProperty("--borderHover", this.value);
   });
