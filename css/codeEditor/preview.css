@@ -21,14 +21,15 @@
 .painel__code {
     position: relative;
     left: 5%;
-    top: 1em;
+    top: 0em;
     background-color: #000E1E;
-    box-shadow: 5px 5px 30px #04010F;
+    box-shadow: 5px 5px 30px #04010f;
     padding-bottom: 7px;
     border-radius: 9px;
     width: 90%;
     min-height: 22.0em;
-    margin-bottom: 36px;
+    margin-top: 18px;
+    margin-bottom: 37px;
     transition: 900ms;
     animation: 1s start_code forwards;
 }
@@ -85,10 +86,7 @@
 	border: none;
 	width: 100%;
 	height: 8%;
-}
-
-.button__viewHightLight__disable {
-	display: none;
+	opacity: 0%;
 }
 
 ::-webkit-scrollbar-track {

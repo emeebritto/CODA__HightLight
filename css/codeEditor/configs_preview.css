@@ -2,8 +2,15 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.myProject{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .myProject__titleYourProject {
@@ -16,6 +23,7 @@
 
 .myProject__name {
 	background-color: rgba(255, 255, 255, 4%);
+	width: 92%;
 	outline:none;
 	border: none;
 	border-radius: 8px;
@@ -32,6 +40,7 @@
 
 .myProject__description {
 	background-color: rgba(255, 255, 255, 4%);
+	width: 96%;
 	outline:none;
 	color: white;
 	padding-top: 7px;
@@ -42,6 +51,13 @@
 	margin-bottom: 19px;
 	transform: translateX(100%);
     animation: 600ms start_configPreview forwards 300ms;
+}
+
+.personalization {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .personalization__title {
@@ -147,6 +163,7 @@
 .saveOptions {
 	display: flex;
 	height: 50px;
+	margin-bottom: 3px;
 }
 
 .box__button_Export {

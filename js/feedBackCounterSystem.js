@@ -27,8 +27,6 @@ function markLike() {
 
 	likedBy = JSON.parse(localStorage.getItem(`likedBy ${accountActive.dataUser.nameUser}`));
 
-
-	/*for(var i = 1; i < likedBy.length; i++){*/
 	likedBy.forEach(function(postLiked){
 		redirect = JSON.parse(localStorage.getItem(parenteContent.dataset.id));
 		if (postLiked == redirect.onCoda) {
@@ -46,7 +44,6 @@ function markLike() {
 	})
 
 	if(xreturn == true){return}
-
 
 	postTarget = JSON.parse(localStorage.getItem(parenteContent.dataset.id));
 

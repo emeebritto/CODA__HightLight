@@ -1,26 +1,30 @@
 .container {
 	position: relative;
-	display: grid;
-	height: calc(100vh - 90px);
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: auto;
-}
-
-.menu {
-	background-color: ;
-	grid-column: 1/2;
-	grid-row: 1/2;
+	display: flex;
 }
 
 .codePreview {
 	position: relative;
-	background-color: ;
-	grid-column: 2/3;
-	grid-row: 1/2;
+	display: flex;
+	justify-content: flex-end;
+	width: 190%;
+}
+
+.codePreview__button__viewHightLight{
+	display: flex;
+	flex-direction: column;
+	width: 690px;
+	margin-bottom: 110px;
+}
+
+.container__configs_preview {
+	display: flex;
+	width: 300px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .configs_preview {
-	background-color: ;
-	grid-column: 3/4;
-	grid-row: 1/2;
+	display: flex;
+	width: 283px;
 }

@@ -5,6 +5,7 @@
   
   color.addEventListener('input', function(){
 
+/*    borderColor.style.backgroundColor = this.value;*/
     borderColor.style.borderColor = this.value;
     document.documentElement.style.setProperty("--borderHover", this.value);
   });
@@ -37,14 +38,14 @@ languagem.addEventListener('change', () => {
 
 function highlightActive() {
     const button = document.querySelector('.button__viewHightLight');
-    button.classList.add("button__viewHightLight__disable");
+    button.style.opacity="0%";
 	const codigo = fieldCode.querySelector('code');
     hljs.highlightBlock(codigo);
 }
 
 function activeAlert(){
     const button = document.querySelector('.button__viewHightLight');
-    button.classList.remove("button__viewHightLight__disable");
+    button.style.opacity="100%";
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -63,10 +64,3 @@ document.querySelector(".box__button_Export").addEventListener("click", function
     })
 
 })
-
-function testess(){
-
-    var tl = gsap.timeline({repeat: 1, yoyo: true});
-
-    tl.to(".nav_float", 3, {left: 340, rotate: 56}).to(".nav_float", 3, {y:123})
-}
