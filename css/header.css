@@ -1,6 +1,6 @@
 html {
 	max-width: 1366px;
-  background: linear-gradient(270deg, #060525, #060525, #07061b, #07061b);
+    background: linear-gradient(270deg, #060525, #060525, #07061b, #07061b);
 }
 
 ::selection {

@@ -14,8 +14,12 @@ document.querySelector(".box_inforAccount_logOut").addEventListener("click", fun
 })
 
 document.querySelector('body').addEventListener("click", function(){
-	if (event.target != document.querySelector(".box_inforAccount_logOut") && event.target != document.querySelector(".box_inforAccount") && boxInfoAccountActive == true && event.target != document.getElementById("nav_link__account")){
+	if (event.target != document.querySelector(".box_inforAccount_logOut") && event.target != document.querySelector(".box_inforAccount") && boxInfoAccountActive == true && event.target != document.getElementById("nav_link__account") && event.target != document.querySelector(".box_button__config")){
 		document.querySelector(".box_inforAccount").style.display="none";
 		boxInfoAccountActive = false;
 	}
+})
+
+document.querySelector(".box_button__config").addEventListener("click", () => {
+	window.location.assign("configAccount.html");
 })

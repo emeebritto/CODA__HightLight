@@ -28,6 +28,24 @@
 	color: gray;
 }
 
+.buttons__confi_logOut {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.box_button__config {
+	background: url(../assets/icons/manage_accounts_white_24dp.svg) no-repeat center #5136C6;
+	border-radius: 13px;
+	width: 37px;
+	transition: 700ms;
+}
+
+.box_button__config:hover {
+	cursor: pointer;
+	background-color: #31189E;
+}
+
 .box_inforAccount_logOut {
 	border: none;
 	outline: none;

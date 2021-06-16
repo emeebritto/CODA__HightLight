@@ -9,6 +9,7 @@ var parenteContent="";
 var postTarget="";
 var redirect="";
 var xreturn="";
+var removed=[];
 
 function markLike() {
     "use strict"
@@ -34,9 +35,15 @@ function markLike() {
 	        postTarget.detalhesDoproject.numLikes = postTarget.detalhesDoproject.numLikes - 1;
 	        target.src="assets/icons/favorite_border_white_24dp.svg";
 	        liked.querySelector(".num_likes").textContent = postTarget.detalhesDoproject.numLikes;
+
 	        localStorage.setItem(postTarget.onCoda, JSON.stringify(postTarget));
 	        localStorage.setItem(postTarget.onPrivacy, JSON.stringify(postTarget));
-	        likedBy.splice(postTarget.onCoda);
+
+	        for(var i = 0; i < likedBy.length; i++){
+	        	if (postTarget.onCoda == likedBy[i]){
+	        		let removed = likedBy.splice(i, 1);
+	        	}
+	        }
 	        localStorage.setItem(`likedBy ${accountActive.dataUser.nameUser}`, JSON.stringify(likedBy));
 	        xreturn = true;
 	        return
@@ -59,4 +66,16 @@ function markLike() {
 	if (localStorage.getItem("loginActive000") != null && postTarget.onPrivacy != undefined){
 	    localStorage.setItem(postTarget.onPrivacy, JSON.stringify(postTarget));
 	}
+}
+
+
+function removerPorId(array, id) {
+  var result = array.filter(function(el) {
+    return el.id == id;
+  });
+    
+  for(var elemento of result){
+    var index = array.indexOf(elemento);    
+    array.splice(index, 1);
+  }
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CODA - Account</title>
+ 
+        <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/configAccount/mainScreen.css">
+		<link rel="stylesheet" type="text/css" href="css/configAccount/deleteAccount.css">
+		<link rel="stylesheet" type="text/css" href="css/configAccount/changePassword.css">
+	</head>
+	<body class="body">
+		<section class="container__configAccount">
+			<img id="img_perfilUser" src="assets/imgUsers/EmersonBritto.png">
+			<section class="box__name_id_User">
+			    <p id="box_nameUser">Emerson_Britto</p>
+			    <p id="box_idUser">ID: 669454545</p>		
+			</section>
+			<section class="optionsSelector" style="display: ;">
+				<div class="box__configOptions">
+				    <div class="configOptions" id="changeNameUser"></div>
+				    <p class="configOptions_title" style="text-decoration: line-through; color: gray;">Change Username</p>				
+				</div>
+				<div class="box__configOptions">
+				    <div class="configOptions" id="changeMail"></div>
+				    <p class="configOptions_title" style="text-decoration: line-through; color: gray;">Change Mail</p>				
+				</div>
+				<div class="box__configOptions">
+				    <div class="configOptions" id="changePassword"></div>
+				    <p class="configOptions_title">Change Password</p>				
+				</div>
+				<div class="box__configOptions">
+				    <div class="configOptions" id="deleteAccount"></div>
+				    <p class="configOptions_title">Delete Account</p>				
+				</div>
+			</section>
+
+			<section class="section_changePassword" style="display: none;">
+				<section>
+					<section class="box__actualPassword">
+						<p for="actualPassword" class="titles_changePassword">Digite a senha atual</p>
+						<input type="password" id="actualPassword" name="password" class="input_changePassword" minlength="8" maxlength="30">
+						<span id="erro_inputPassword" style="display:none;"><p style="color: red;">Senha incorreta!</p></span>
+					</section>
+				</section>
+				<section class="box__newPassword">
+					<section>
+						<p for="newPassword" class="titles_changePassword">Digite nova senha</p>
+						<input type="password" id="newPassword" name="password" class="input_changePassword" minlength="8" maxlength="30">
+						<p class="alert_invalid_password" style="display: none; color: #E15B5B;">different passwords!</p>
+						<p class="alert_short_password" style="display: none; color: #E15B5B;">Please use a password at least 8 characters long.</p>
+					</section>
+					<section>
+						<p for="reNewPassword" class="titles_changePassword">Re-Digite nova senha</p>
+						<input type="password" id="reNewPassword" name="password" class="input_changePassword" minlength="8" maxlength="30">	
+					</section>
+				</section>
+				<button id="btn_changePassword">Alterar</button>
+				<button id="btn_back">Back</button>
+			</section>
+
+		    <section class="dialog__DeleteAccount" style="display: none;">
+		    	<p id="txt_dialog__DeleteAccount">Você está prestes a Excluir esta conta</p>
+		    	<div class="options_dialog__DeleteAccount">
+		    		<button class="btn_optionsDialog" id="optionCancel">Cancelar</button>
+		    		<button class="btn_optionsDialog" id="optionConfirm">Confirmar</button>
+		    	</div>
+		    </section>
+		    <div id="back_home"></div>
+		</section>
+		<script src="js/configAccount/mainScreen.js"></script>
+		<script src="js/configAccount/changePassword.js"></script>
+	</body>
+</html>

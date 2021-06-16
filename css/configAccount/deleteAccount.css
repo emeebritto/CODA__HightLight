@@ -1,0 +1,52 @@
+.dialog__DeleteAccount {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 200px;
+	height: 100px;
+}
+
+#txt_dialog__DeleteAccount {
+	color: white;
+	font-size: 2em;
+	font-family: 'Abel', sans-serif;
+}
+
+.options_dialog__DeleteAccount {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 350px;
+}
+
+.btn_optionsDialog {
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 13px;
+	font-size: 1.5em;
+	padding: 8px 15px;
+}
+
+.btn_optionsDialog:hover {
+	cursor: pointer;
+}
+
+#optionConfirm {
+	background-color: #C22D2D;
+	transition: 700ms;
+}
+
+#optionConfirm:hover {
+	background-color: #881111;
+}
+
+#optionCancel {
+	background-color: #655AD6;
+	transition: 700ms;
+}
+
+#optionCancel:hover {
+	background-color: #221887;
+}

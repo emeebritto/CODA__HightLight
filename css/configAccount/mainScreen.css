@@ -1,0 +1,172 @@
+html {
+	background: linear-gradient(270deg, #0E0539, #060525, #07061b, #0E0539);
+}
+
+#btn_back {
+	position: relative;
+	border: none;
+	outline: none;
+	color: white;
+	width: 50%;
+	height: 30px;
+	left: 25%;
+	margin-top: 20px;
+	padding: 5px 10px;
+	background-color: transparent;
+	transition: 600ms;
+}
+
+#back_home {
+	position: relative;
+	top: 10%;
+	left: -44%;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	background: url(../../assets/icons/home_white_24dp.svg) no-repeat center #5F5CC8;
+	width: 60px;
+	height: 50px;
+	border-radius: 14px;
+	transition: 600ms;
+}
+
+#back_home:hover {
+	cursor: pointer;
+	background-color: #27239E;
+}
+
+#btn_back:hover {
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: rgb(100 100 100 / 10%);
+}
+
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container__configAccount {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: rgb(0 0 0 / 30%);
+	border-radius: 14px;
+	margin-top: 8%;
+	width: 70vw;
+}
+
+#img_perfilUser {
+	position: absolute;
+	top: -15%;
+	left: 5%;
+	width: 215px;
+	border-radius: 65px;
+}
+
+.box__name_id_User {
+	position: absolute;
+	font-family: 'Abel', sans-serif;
+	top: 8%;
+	left: 30%;
+
+}
+
+#box_nameUser {
+	font-size: 2.4em;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+
+#box_idUser {
+	color: #A5A5A5;
+}
+
+.optionsSelector {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 200px;
+	justify-content: space-around;
+	align-items: center;
+	width: 90%;
+	height: 40%;
+}
+
+.configOptions {
+	width: 170px;
+	height: 170px;
+	border-radius: 100px;
+	transition: 600ms;
+}
+
+.configOptions:hover {
+	border-radius: 70px;
+	cursor: pointer;
+	background-size: 75px;
+	background-color: #291582;
+}
+
+#changeMail {
+	background: url(../../assets/icons/mailWhite.svg) no-repeat center #442BB9;
+	background-size: 65px;
+	transition: 700ms;
+}
+
+#changeMail:hover {
+	cursor: pointer;
+	background-size: 75px;
+	background-color: #291582;
+}
+
+#changePassword {
+	background: url(../../assets/icons/password_white_24dp.svg) no-repeat center #442BB9;
+	background-size: 65px;
+	transition: 700ms;
+}
+
+#changePassword:hover {
+	cursor: pointer;
+	background-size: 75px;
+	background-color: #291582;
+}
+
+#deleteAccount {
+	background: url(../../assets/icons/delete_outline_white_24dp.svg) no-repeat center #442BB9;
+	background-size: 65px;
+	transition: 700ms;
+}
+
+#deleteAccount:hover {
+	cursor: pointer;
+	background-size: 75px;
+	background-color: #82153D;
+}
+
+#changeNameUser {
+	background: url(../../assets/icons/badge_white_24dp.svg) no-repeat center #442BB9;
+	background-size: 65px;
+	transition: 700ms;
+}
+
+#changeNameUser:hover {
+	cursor: pointer;
+	background-size: 75px;
+	background-color: #291582;
+}
+
+.box__configOptions {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	height: 225px;
+}
+
+.configOptions_title {
+	margin-top: 5px;
+	font-size: 1.5em;
+	font-family: 'Abel', sans-serif;
+	color: white;
+}
