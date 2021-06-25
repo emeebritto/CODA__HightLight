@@ -1,6 +1,6 @@
 # [CODA](https://emerson-britto.github.io/CODA__HightLight/index.html) - Highlight Online
 
-O Projeto teve seu início na Alura Chellenge. logo depois, com o intúito de ir além do proposto,
+O Projeto teve seu início na Alura Challenge. logo depois, com o intúito de ir além do proposto,
 outras funcionalidades foram implementadas.
 
 ## Algumas das Funcionalidades nesse Projeto:
